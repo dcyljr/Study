@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JS_learning1</title>
     <link rel="stylesheet" href="./css/JS_learning1.css">
@@ -11,7 +12,11 @@
 </head>
 
 <body>
-
+    <button id="btn" type="button">点击</button>
+    <p class="text">23456</p>
 </body>
-
+<script>
+    var pageWidth=window.innerWidth;
+    document.write('<style>html:{font-size:'+pageWidth+'px;}</style>');
+</script>
 </html>

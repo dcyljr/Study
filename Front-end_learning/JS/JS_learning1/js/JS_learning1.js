@@ -4,10 +4,8 @@ window.onload = function () {
         var x = document.getElementsByClassName('text');
         x[0].style.color = "red";
     }
-}
 
-window.onload = function () {
-    var wenzi = document.getElementById('text');
+    var wenzi = document.getElementById('clickbtn');
     var div = document.getElementById('menu');
     wenzi.onclick = function () {
         if (div.style.display == 'block') { // == 判断div.display是否为显示

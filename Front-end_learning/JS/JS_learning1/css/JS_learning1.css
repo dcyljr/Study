@@ -14,17 +14,17 @@ a {
     text-decoration: none;
 }
 
-#text {
+#clickbtn {
     display: block;
-    width: 300px;
+    width: 18.75rem;
     cursor: pointer;
-    height: 20px;
-    border: solid 1px #CCC;
+    height: 1.25rem;
+    border: solid .0625rem #CCC;
 }
 
 #menu {
     display: none;
-    width: 300px;
-    height: 100px;
-    border: solid 1px #CCC;
+    width: 18.75rem;
+    height: 6.25rem;
+    border: solid .0625rem #CCC;
 }

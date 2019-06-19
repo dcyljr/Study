@@ -6,6 +6,10 @@
     color: #1c1b1b;
 }
 
+body {
+    text-align: center;
+}
+
 li {
     list-style: none;
 }
@@ -14,12 +18,19 @@ a {
     text-decoration: none;
 }
 
+.cli_div {
+    margin: 1.25rem auto;
+    width: 31.25rem;
+    padding: .625rem;
+}
+
 #clickbtn {
     display: block;
     width: 18.75rem;
     cursor: pointer;
     height: 1.25rem;
     border: solid .0625rem #CCC;
+    margin: 0 auto;
 }
 
 #menu {
@@ -27,4 +38,11 @@ a {
     width: 18.75rem;
     height: 6.25rem;
     border: solid .0625rem #CCC;
+    margin: 0 auto;
+}
+
+.changeBg{
+    margin:.625rem auto;
+    padding: 0 1.25rem;
+    width:15.625rem;
 }

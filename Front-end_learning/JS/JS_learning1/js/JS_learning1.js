@@ -14,4 +14,26 @@ window.onload = function () {
             div.style.display = 'block';
         }
     }
+
+
+    //for循环
+    var btnbg = document.getElementById('btn_bg');
+    var btnnbg = document.getElementById('btn_nbg');
+    var menubg = document.getElementById('menubg');
+    var menuli = menubg.getElementsByTagName('li');
+    btnbg.onclick = function () {
+        for (var i = 0; i < menuli.length; i++) {
+            if (i % 2 == 0) {
+                menuli[i].style.backgroundColor = '#4fd4';
+            }
+        }
+    }
+
+    btnnbg.onclick = function () {
+        for (var i = 0; i < menuli.length; i++) {
+            if (i % 2 == 0) {
+                menuli[i].style.backgroundColor = '#fff';
+            }
+        }
+    }
 }

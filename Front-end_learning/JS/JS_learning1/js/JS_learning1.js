@@ -16,7 +16,7 @@ window.onload = function () {
     }
 
 
-    //for循环
+    //for循环 获取奇偶数
     var btnbg = document.getElementById('btn_bg');
     var btnnbg = document.getElementById('btn_nbg');
     var menubg = document.getElementById('menubg');
@@ -24,7 +24,9 @@ window.onload = function () {
     btnbg.onclick = function () {
         for (var i = 0; i < menuli.length; i++) {
             if (i % 2 == 0) {
-                menuli[i].style.backgroundColor = '#4fd4';
+                menuli[i].style.backgroundColor = '#4fd4';//奇数
+            } else {
+                menuli[i].style.backgroundColor = '#3df52c';//偶数
             }
         }
     }
@@ -32,7 +34,9 @@ window.onload = function () {
     btnnbg.onclick = function () {
         for (var i = 0; i < menuli.length; i++) {
             if (i % 2 == 0) {
-                menuli[i].style.backgroundColor = '#fff';
+                menuli[i].style.backgroundColor = '#fff';//奇数
+            } else {
+                menuli[i].style.backgroundColor = '#fff';//偶数
             }
         }
     }

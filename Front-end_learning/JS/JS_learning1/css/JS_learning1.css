@@ -41,8 +41,138 @@ a {
     margin: 0 auto;
 }
 
-.changeBg{
-    margin:.625rem auto;
+.changeBg {
+    margin: .625rem auto;
     padding: 0 1.25rem;
-    width:15.625rem;
+    width: 15.625rem;
+}
+
+#img_box {
+    width: 49.375rem;
+    height: 21.25rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+#pic {
+    width: 100%;
+    height: 21.25rem;
+}
+
+.img_btn {
+    width: 3.125rem;
+    height: 6.25rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 6.25rem;
+    position: absolute;
+    top: 12.5rem;
+    display: none;
+}
+
+#left {
+    left: 0;
+}
+
+#right {
+    right: 0;
+}
+
+#ul_box {
+    position: absolute;
+    bottom: 1.25rem;
+    left: 14.375rem;
+    display: flex;
+    flex-direction: row;
+}
+
+#ul_box li {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: .625rem;
+    background-color: #aaa;
+    text-align: center;
+    line-height: 1.25rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.main {
+    width: 75rem;
+    height: auto;
+    margin: 3.125rem auto;
+    overflow: hidden;
+}
+
+.nav {
+    width: 75rem;
+    height: 5rem;
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav ul li {
+    width: 25%;
+    height: 5rem;
+    text-align: center;
+    line-height: 5rem;
+    cursor: pointer;
+}
+
+.changeColor {
+    background: #ffcc00;
+    border-radius: 5px;
+}
+
+.banner {
+    width: 75rem;
+    height: 28.75rem;
+    overflow: hidden;
+}
+
+.banner-slide {
+    width: 100%;
+    height: 28.75rem;
+}
+
+.tab {
+    width: 31.25rem;
+    height: auto;
+    margin: 30px auto;
+}
+
+#tab_menu,
+#tab_menu ul {
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+}
+
+#tab_menu ul{
+    border:1px solid #f88a8a;
+}
+
+#tab_menu li {
+    display: inline;
+    width: 15%;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.act {
+    background: #ffcc92;
+}
+
+#tab_menu li:hover {
+    background: #019cbd;
+}
+
+.c_tab {
+    height: 18.75rem;
+    border:1px solid #9c9c9c;
 }

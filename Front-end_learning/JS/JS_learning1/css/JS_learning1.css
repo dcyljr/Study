@@ -153,8 +153,8 @@ a {
     line-height: 3rem;
 }
 
-#tab_menu ul{
-    border:1px solid #f88a8a;
+#tab_menu ul {
+    border: 1px solid #f88a8a;
 }
 
 #tab_menu li {
@@ -174,5 +174,62 @@ a {
 
 .c_tab {
     height: 18.75rem;
-    border:1px solid #9c9c9c;
+    border: 1px solid #9c9c9c;
+}
+
+.roll_box {
+    width: 44.375rem;
+    height: 6.75rem;
+    margin: 3.125rem auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.u_roll {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.u_roll li {
+    width: 10.625rem;
+    height: 6.75rem;
+    margin-left: .625rem;
+    cursor: pointer;
+}
+
+.u_roll li img {
+    width: 100%;
+    height: 6.75rem;
+}
+
+.ii_roll {
+    width: 43.75rem;
+    height: 8.5rem;
+    margin: 3.125rem auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.ulroll,
+.rollt {
+    display: flex;
+    flex-direction: row;
+}
+
+.ulroll li,
+.rollt li {
+    width: 11.25rem;
+    height: 8.5rem;
+    margin-left: .625rem;
+    cursor: pointer;
+}
+
+.ulroll li img,
+.rollt li img {
+    width: 100%;
+    height: 8.5rem;
 }

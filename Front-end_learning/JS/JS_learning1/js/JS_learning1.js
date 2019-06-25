@@ -16,7 +16,7 @@ window.onload = function () {
     }
 
 
-    //for循环 获取奇偶数
+    //for循环 获取奇偶数:
     var btnbg = document.getElementById('btn_bg');
     var btnnbg = document.getElementById('btn_nbg');
     var menubg = document.getElementById('menubg');
@@ -40,7 +40,9 @@ window.onload = function () {
             }
         }
     }
-    //轮播图一
+
+
+    //轮播图一:
     var imgBox = document.getElementById('img_box');
     var ulBox = document.getElementById('ul_box');
     var picImg = document.getElementById('pic');
@@ -113,7 +115,7 @@ window.onload = function () {
         }, false);
     }
 
-    //轮播图二
+    //轮播图二:
     var time = null;
     var index = 0;
     var pics = document.getElementsByClassName('banner-slide');
@@ -171,7 +173,7 @@ window.onload = function () {
     }
     slideImg();
 
-    //选项卡
+    //选项卡:
     var tabMenu = document.getElementById('tab_menu');
     var menuLi = tabMenu.getElementsByTagName('li');
     var tabCon = document.getElementById('tab_content');
@@ -190,5 +192,58 @@ window.onload = function () {
             menuLi[m].className = '';
             conTab[m].style.display = 'none';
         }
+    }
+
+    //滚动图一:
+    var rollBox = document.getElementById('roll_box');
+    var rollUl = document.getElementById('u_roll');
+    var rollLi = rollUl.getElementsByTagName('li');
+    rollUl.innerHTML = rollUl.innerHTML + rollUl.innerHTML; //li下的内容相加
+    rollUl.style.width = rollLi[0].offsetWidth * rollLi.length + 'px'; //ul的宽度等于每个li的宽度乘以所有li长度
+    var speed = 2
+    //主方法
+    function move() {
+        //如果左边长度横向滚动了长度一半之后，回到初始位置
+        if (rollUl.offsetLeft < -rollUl.offsetWidth / speed) {
+            rollUl.style.left = '0'
+        }
+        //如果有变横向滚动的距离大于0，就让他的位置回到一半
+        if (rollUl.offsetLeft > 0) {
+            rollUl.style.left = -rollUl.offsetWidth / speed + 'px';
+        }
+        rollUl.style.left = rollUl.offsetLeft - 2 + 'px'; //进行左横向滚动
+        //rollUl.style.left = rollUl.offsetLeft + speed + 'px'; //进行有横向滚动
+    }
+    //调用方法
+    var mtimer = setInterval(move, 100)
+    //鼠标指向时暂停
+    rollBox.onmouseover = function () {
+        clearInterval(mtimer);
+    }
+    //鼠标离开后继续滚动
+    rollBox.onmouseout = function () {
+        mtimer = setInterval(move, 100)
+    }
+
+    //滚动图二:
+    var rBox = document.getElementById('ii_roll');
+    var rollt = document.getElementById('ulroll');
+    var rolls = document.getElementById('rollt');
+    rolls.innerHTML = rollt.innerHTML; //克隆第一个ul的数据
+    function scrollup() {
+        if (rBox.scrollLeft >= rollt.offsetWidth) {
+            //滚动条距离左边的值恰好等于div的宽度时，达到滚动临界点，此时将让scrollLeft=0,让ul回到初始位置，实现无缝滚动
+            rBox.scrollLeft = 0;
+        } else {
+            rBox.scrollLeft++;
+        }
+    }
+    var scrollMove = setInterval(scrollup, 30); //数值越大，滚动速度越慢
+    //鼠标经过时滚动停止与继续
+    rBox.onmouseover = function () {
+        clearInterval(scrollMove);
+    }
+    rBox.onmouseout = function () {
+        scrollMove = setInterval(scrollup, 30);
     }
 }

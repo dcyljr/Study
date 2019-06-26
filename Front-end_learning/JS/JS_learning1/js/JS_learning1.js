@@ -15,7 +15,12 @@ window.onload = function () {
         }
     }
 
-
+    //for循环有三个表达式：申明循环变量、判断循环条件、更新循环变量;
+    //for循环执行特点：先判断，再执行，与while相同。
+    //for循环三个表达式都可以由多部分组成；第二部分多个判断条件用&& || 链接，第一二部分用逗号分隔；
+    //break与continue:
+    //break:跳出本层循环剩余的代码，继续执行下一次循环。如果有多层嵌套，则只跳出一层
+    //continue:跳出本次循环剩余的代码，继续执行下一次循环。对于for循环，continue之后执行的代码，是循环变量更新的语句i++对于while、do-while循环，continue之后执行的语句，是循环条件判断；因此使用这两个循环时，必须将continue放到i++之后使用，否则continue跳出i++导致死循环。
     //for循环 获取奇偶数:
     var btnbg = document.getElementById('btn_bg');
     var btnnbg = document.getElementById('btn_nbg');
@@ -246,4 +251,29 @@ window.onload = function () {
     rBox.onmouseout = function () {
         scrollMove = setInterval(scrollup, 30);
     }
+
+    //无缝循环滚动:
+    //数组形式：
+    //1、使用字面量申明：var arr=[];2、在JS中，同一数组，可以存储各种数据类型，直接将数据存储在数组中，eg:var arr=[1,'chuan',true,{},null,func];3、使用new关键字申明：var arr=new Array(参数);参数可以是：1)参数省略，表示创建一个空数组;2）参数为一个整数，表示申明一个length为指定长度的数组。但是这个length可以随时可变可追加。3）参数为逗号分隔的多个数值，表示数组的多个值，eg:new Array(1,2,3)==[1,2,3]
+    var arr = new Array();
+    arr[0] = 'images/num1.jpg';
+    arr[1] = 'images/num2.jpg';
+    arr[2] = 'images/num3.jpg';
+    arr[3] = 'images/num4.jpg';
+    arr[4] = 'images/num5.jpg';
+    arr[5] = 'images/num3.jpg';
+    arr[6] = 'images/num2.jpg';
+    var curIndex = 0;
+    setInterval(function () { //以setInterval设置定时器，每隔n秒执行一次，接受两个参数：需要执行的function、毫秒数。clearInterval就是用来清楚定时器
+        var arrimg = document.getElementById('arr_img');
+        var aimg = document.getElementById('arrimg');
+        if (curIndex == arr.length - 1) {
+            curIndex = 0;
+        } else {
+            curIndex += 1;
+        }
+        arrimg.src = arr[curIndex];
+        //console.log(curIndex);
+    }, 4000);
+
 }

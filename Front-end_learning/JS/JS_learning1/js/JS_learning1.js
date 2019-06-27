@@ -89,7 +89,7 @@ window.onload = function () {
     imgBox.addEventListener('mouseout', function () {
         lbtn.style.display = 'none';
         rbtn.style.display = 'none';
-        timer - setInterval(startloop, 5000);
+        timer - setInterval(startloop, 4000);
     }, false);
     //左右按钮点击
     lbtn.addEventListener('click', deep, false);
@@ -177,6 +177,86 @@ window.onload = function () {
         liS[index].className = 'changeColor';
     }
     slideImg();
+
+    //轮播图三:
+    var container = document.getElementById('container');
+    var cliList = document.getElementById('rollList');
+    var buttons = document.getElementById('cliButton').getElementsByTagName('span');
+    var prev = document.getElementById('prev');
+    var next = document.getElementById('next');
+    var ind = 1;
+    var ntimer;
+
+    function animate(offset) {
+        //获取的是style.left，是相对左边获取距离，所以第一张图后style.left都为负值，且style.left获取的是字符串，需要用parseInt()取整转化为数字
+        var newLeft = parseInt(cliList.style.left) + offset;
+        cliList.style.left = newLeft + 'px';
+        //无限滚动判断
+        if (newLeft > -600) {
+            cliList.style.left = -3000 + 'px';
+        }
+        if (newLeft < -3000) {
+            cliList.style.left = -600 + 'px';
+        }
+    }
+
+    function play() {
+        //重复执行的定时器
+        ntimer = setInterval(function () {
+            next.onclick();
+        }, 3000);
+    }
+
+    function stop() {
+        clearInterval(ntimer);
+    }
+
+    function buttonsShow() {
+        //将之前的小圆点样式清除
+        for (var i = 0; i < buttons.length; i++) {
+            if (buttons[i].className == 'on') {
+                buttons[i].className = '';
+            }
+        }
+        //数组从0开始，故ind需要-1
+        buttons[ind - 1].className = 'on';
+    }
+    prev.onclick = function () {
+        ind -= 1;
+        if (ind < 1) {
+            ind = 5
+        }
+        buttonsShow();
+        animate(600);
+    };
+
+    next.onclick = function () {
+        //由于上边定时器的作用，ind会一直递增下去，七个小圆点需要做出判断
+        ind += 1;
+        if (ind > 5) {
+            ind = 1
+        }
+        animate(-600);
+        buttonsShow();
+    };
+    for (var i = 0; i < buttons.length; i++) {
+        (function (i) {
+            buttons[i].onclick = function () {
+                //获取鼠标移动到小圆点的位置，用this把ind绑定到对象buttons[i]上
+                //由于此处ind是自定义属性，需要用到getAttribute()这个DOM2级方法，去获取自定义ind的属性
+                var clickIndex = parseInt(this.getAttribute('index'));
+                var offset = 600 * (ind - clickIndex); //ind是当前图片停留时的ind
+                animate(offset);
+                ind = clickIndex; //存放鼠标点击后的位置，用于小圆点正常显示
+                buttonsShow();
+            }
+        })(i)
+    }
+    container.onmouseover = stop;
+    container.onmouseout = play;
+    play();
+
+
 
     //选项卡:
     var tabMenu = document.getElementById('tab_menu');

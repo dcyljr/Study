@@ -356,4 +356,25 @@ window.onload = function () {
         //console.log(curIndex);
     }, 4000);
 
+    //返回顶部
+    //创建变量
+    var scroll_Top = document.getElementById('top');
+    var scrolltimer = null;
+
+    function scrollTop() {
+        //取消一个通过调用requestAnimationFrame()方法添加到计划中的动画帧请求
+        cancelAnimationFrame(scrolltimer);
+        //requestAnimationFrame会把每一帧中的所有DOM操作集中起来，在一次重绘或回流中完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率一般来说，这个频率为每秒60帧。
+        scrolltimer = requestAnimationFrame(function sTop() {
+            var top = document.body.scrollTop || document.documentElement.scrollTop;
+            if (top > 0) {
+                //以定时器将scrollTop的值每次减少20（自行设置），直到减少到0，则滚动完毕
+                document.body.scrollTop = document.documentElement.scrollTop = top - 3000; //数值越大，回滚越接近顶部，一般数值与页面高度相等
+            } else {
+                cancelAnimationFrame(scrolltimer);
+            }
+        });
+    }
+    scroll_Top.addEventListener('click', scrollTop, false);
+
 }

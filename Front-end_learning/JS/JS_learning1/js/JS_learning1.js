@@ -1,4 +1,18 @@
 window.onload = function () {
+    //原生JS+CSS实现一个简单带二级菜单顶部导航
+    var navBarBox = document.getElementById('navBarBox');
+    var liTags = navBarBox.querySelectorAll('li');
+    for (var i = 0; i < liTags.length; i++) {
+        liTags[i].onmouseenter = function (e) {
+            var li = e.currentTarget;
+            li.classList.add("at");
+        }
+        liTags[i].onmouseleave = function (e) {
+            var li = e.currentTarget;
+            li.classList.remove('at');
+        }
+    }
+
     var t_btn = document.getElementById('btn');
     t_btn.onclick = function () {
         var x = document.getElementsByClassName('text');
@@ -377,17 +391,21 @@ window.onload = function () {
     }
     scroll_Top.addEventListener('click', scrollTop, false);
 
-    //原生JS+CSS实现一个简单带二级菜单顶部导航
-    var navBarBox = document.getElementById('navBarBox');
-    var liTags = navBarBox.querySelectorAll('li');
-    for (var i = 0; i < liTags.length; i++) {
-        liTags[i].onmouseenter = function (e) {
-            var li = e.currentTarget;
-            li.classList.add("at");
+    //添加分别点击按钮一
+    var btnBox = document.getElementById('btn_box');
+    var button = btnBox.getElementsByTagName('button');
+    var alertWin = document.getElementById('alert_win');
+    var win = alertWin.getElementsByTagName('div');
+    for (i = 0; i < button.length; i++) {
+        button[i].index = i;
+        button[i].onclick = function () {
+            for (var i = 0; i < button.length; i++) {
+                win[i].className = '';
+            }
+            win[this.index].className = 'win'
         }
-        liTags[i].onmouseleave = function (e) {
-            var li = e.currentTarget;
-            li.classList.remove('at');
+        for (var m = 1; m < button.length; m++) {
+            win[i].className = '';
         }
     }
 

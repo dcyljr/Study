@@ -12,6 +12,31 @@
 </head>
 
 <body>
+    <!-- 原生JS+CSS实现一个简单带二级菜单顶部导航 -->
+    <nav class="clearfix">
+        <div class="topNavBar">
+            <ul class="clearfix navBarBox" id="navBarBox">
+                <li><a href="#">主页</a></li>
+                <li><a href="#">介绍</a></li>
+                <li><a href="#">技能</a>
+                    <ul>
+                        <li>javascript</li>
+                        <li>html</li>
+                        <li>css</li>
+                    </ul>
+                </li>
+                <li><a href="#">关于</a>
+                    <ul>
+                        <li>网站服务</li>
+                        <li>联系我们</li>
+                        <li>投诉申诉</li>
+                        <li>网站备案</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <button id="btn" type="button">点击</button>
     <p class="text">23456</p>
     <div class="cli_div">
@@ -149,30 +174,15 @@
     <!-- 返回顶部 -->
     <div class="top" id="top">返回顶部</div>
 
-    <!-- 原生JS+CSS实现一个简单带二级菜单顶部导航 -->
-    <nav class="clearfix">
-        <div class="topNavBar">
-            <ul class="clearfix navBarBox" id="navBarBox">
-                <li><a href="#">主页</a></li>
-                <li><a href="#">介绍</a></li>
-                <li><a href="#">技能</a>
-                    <ul>
-                        <li>javascript</li>
-                        <li>html</li>
-                        <li>css</li>
-                    </ul>
-                </li>
-                <li><a href="#">关于</a>
-                    <ul>
-                        <li>网站服务</li>
-                        <li>联系我们</li>
-                        <li>投诉申诉</li>
-                        <li>网站备案</li>
-                    </ul>
-                </li>
-            </ul>
+    <!-- 添加分别点击按钮一 -->
+    <div class="btn_box" id="btn_box">
+        <button>按钮一</button>
+        <button>按钮二</button>
+        <div class="alert_win" id="alert_win">
+            <div>按钮一</div>
+            <div>按钮二</div>
         </div>
-    </nav>
+    </div>
 
 
 </body>

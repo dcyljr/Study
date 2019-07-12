@@ -377,4 +377,18 @@ window.onload = function () {
     }
     scroll_Top.addEventListener('click', scrollTop, false);
 
+    //原生JS+CSS实现一个简单带二级菜单顶部导航
+    var navBarBox = document.getElementById('navBarBox');
+    var liTags = navBarBox.querySelectorAll('li');
+    for (var i = 0; i < liTags.length; i++) {
+        liTags[i].onmouseenter = function (e) {
+            var li = e.currentTarget;
+            li.classList.add("at");
+        }
+        liTags[i].onmouseleave = function (e) {
+            var li = e.currentTarget;
+            li.classList.remove('at');
+        }
+    }
+
 }

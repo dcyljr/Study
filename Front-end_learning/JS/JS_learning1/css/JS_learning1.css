@@ -346,3 +346,58 @@ a {
 .top:hover {
     cursor: pointer;
 }
+
+.clearfix:arter {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+nav {
+    width: 500px;
+    padding: 12px;
+    background: #fdf5e6;
+    margin: 10px auto;
+    height: auto;
+    padding: 20px 0;
+}
+
+.navBarBox {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    line-height: 50px;
+}
+
+.navBarBox li {
+    width: 110px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.navBarBox li:nth-child(1) {
+    margin-left: 0;
+}
+
+.navBarBox li ul {
+    padding: 8px;
+    background: #fff;
+    white-space: nowrap;
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    margin-top: 14px;
+}
+
+.navBarBox li ul li {
+    margin-left: 0;
+    width: auto;
+}
+
+.topNavBar>ul>li>ul {
+    display: none;
+}
+
+.topNavBar>ul>li.at>ul {
+    display: block;
+}

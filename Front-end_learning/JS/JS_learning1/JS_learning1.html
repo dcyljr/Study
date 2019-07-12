@@ -174,7 +174,8 @@
     <!-- 返回顶部 -->
     <div class="top" id="top">返回顶部</div>
 
-    <!-- 添加分别点击按钮一 -->
+    <!-- 添加分别点击按钮 -->
+    <!-- one: -->
     <div class="btn_box" id="btn_box">
         <button>按钮一</button>
         <button>按钮二</button>
@@ -184,11 +185,33 @@
         </div>
     </div>
 
+    <!-- two: -->
+    <div class="btn_box">
+        <button id="btn_text1" class="btn_text1">按钮一</button>
+        <button id="btn_text2" class="btn_text2">按钮二</button>
+    </div>
+
+    <!-- three: -->
+    <div class="btn_box">
+        <button onclick="alertEvent('按钮一')">按钮一</button>
+        <button onclick="alertEvent('按钮二')">按钮二</button>
+    </div>
+
+    <!-- four: -->
+    <div class="btn_box">
+        <button id="btn_text_four1">按钮一</button>
+        <button id="btn_text_four2">按钮二</button>
+    </div>
+
 
 </body>
 <script>
     var pageWidth = window.innerWidth;
     document.write('<style>html:{font-size:' + pageWidth + 'px;}</style>');
+    /* three: */
+    function alertEvent(text){
+        alert(text)
+    }
 </script>
 
 </html>

@@ -391,7 +391,8 @@ window.onload = function () {
     }
     scroll_Top.addEventListener('click', scrollTop, false);
 
-    //添加分别点击按钮一
+    //添加分别点击按钮
+    //one:
     var btnBox = document.getElementById('btn_box');
     var button = btnBox.getElementsByTagName('button');
     var alertWin = document.getElementById('alert_win');
@@ -408,5 +409,35 @@ window.onload = function () {
             win[i].className = '';
         }
     }
+
+    //two:
+    var btnText1 = document.getElementById('btn_text1');
+    var btnText2 = document.getElementById('btn_text2');
+    btnText1.addEventListener('click', () => {
+        alert('按钮一')
+    })
+    btnText2.addEventListener('click', () => {
+        alert('按钮二')
+    })
+
+    //four:
+    function arrayButtons(buttons) {
+        buttons.map(btn_text_four => {
+            document.getElementById(btn_text_four.id).onclick = function () {
+                alert(btn_text_four.text)
+            }
+        })
+    }
+
+    arrayButtons([{
+            id: 'btn_text_four1',
+            text: '按钮1'
+        },
+        {
+            id: 'btn_text_four2',
+            text: '按钮2'
+        }
+    ])
+
 
 }

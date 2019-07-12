@@ -403,10 +403,21 @@ nav {
     cursor: pointer;
 }
 
+.btn_box {
+    width: 300px;
+    margin: 20px auto;
+    box-shadow: 0 0 2px #019cbd;
+    padding: 20px 0;
+}
+
 .alert_win div {
     display: none;
 }
 
 .alert_win .win {
     display: block;
+}
+
+.btn_text {
+    background: #019cbd;
 }

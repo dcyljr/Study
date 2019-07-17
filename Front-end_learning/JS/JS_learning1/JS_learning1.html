@@ -9,6 +9,7 @@
     <title>JS_learning1</title>
     <link rel="stylesheet" href="./css/JS_learning1.css">
     <script src="./js/JS_learning1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </head>
 
 <body>
@@ -203,15 +204,47 @@
         <button id="btn_text_four2">按钮二</button>
     </div>
 
+    <div id="wrap">
+        <div id="tit">
+            <span class="select">校园招聘</span>
+            <span>社会招聘</span>
+            <span>名企招聘</span>
+        </div>
+        <ul id="con">
+            <li id="1" class="show">校园招聘校园招聘校园招聘</li>
+            <li id="2">社会招聘社会招聘社会招聘</li>
+            <li id="3">名企招聘名企招聘名企招聘</li>
+        </ul>
+    </div>
+
 
 </body>
 <script>
     var pageWidth = window.innerWidth;
     document.write('<style>html:{font-size:' + pageWidth + 'px;}</style>');
     /* three: */
-    function alertEvent(text){
+    function alertEvent(text) {
         alert(text)
     }
+
+    //选项卡
+    $('#tit span').click(function () {
+        var i = $(this).index(); //下标第一种写法
+        //var i = $('tit').index(this);//下标第二种写法
+        $(this).addClass('select').siblings().removeClass('select');
+        $('#con li').eq(i).show().siblings().hide();
+    });
+
+    // 获取 被访问时的 url
+    var ur = location.href;
+    // 获取该url  = 后面的数字 （id）
+    var type = ur.split('?')[1].split("=")[1];
+
+    // 使用传过来的 数字 （id） 来控制该选项卡的切换
+    // 其实就是从页面 A 通过 URL ？ 后面的参数 给页面B 传一个 index
+
+    $('#tit span').eq(type - 1).addClass('select').siblings().removeClass('select');
+    $('#con li').eq(type - 1).show().siblings().hide();
 </script>
 
 </html>

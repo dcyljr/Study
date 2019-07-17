@@ -421,3 +421,41 @@ nav {
 .btn_text {
     background: #019cbd;
 }
+
+#wrap {
+    margin: 90px 290px;
+}
+
+#tit {
+    height: 30px;
+    width: 600px;
+}
+
+#tit span {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    width: 200px;
+    font-size: 20px;
+    text-align: center;
+    color: #000000;
+    border-top: 1px solid #CCCCCC;
+}
+
+#con li {
+    display: none;
+    width: 600px;
+    border: 1px solid #CCCCCC;
+    font-size: 30px;
+    line-height: 200px;
+    text-align: center;
+}
+
+#tit span.select {
+    background: #d6e9fd;
+    color: #ffffff;
+}
+
+#con li.show {
+    display: block;
+}

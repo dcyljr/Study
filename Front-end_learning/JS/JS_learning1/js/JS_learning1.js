@@ -490,13 +490,16 @@ window.onload = function () {
     //BMI判断
     /* var height = document.getElementById('height').value;
     var weight = document.getElementById('weight').value; */
-    var height = parseFloat(prompt('请输入身高(m):'));
-    var weight = parseFloat(prompt('请输入体重(kg):'));
+    /* 
+        var height = parseFloat(prompt('请输入身高(m):'));
+        var weight = parseFloat(prompt('请输入体重(kg):')); */
     var bmiBtn = document.getElementById('bmi_btn');
-    var result = document.getElementById('result');
     bmiBtn.onclick = function () {
-
+        var height = document.getElementById('height').value;
+        var weight = document.getElementById('weight').value;
         var bmi = weight / height * height;
+
+        var result = document.getElementById('result');
         if (bmi > 32) {
             result.innerHTML = ('严重肥胖');
         } else if (bmi >= 28) {

@@ -488,32 +488,27 @@ window.onload = function () {
     })
 
     //BMI判断
-    var height = document.getElementById('height').value;
-    var weight = document.getElementById('weight').value;
-    /* var height = parseFloat(prompt('请输入身高(m):'));
-    var weight = parseFloat(prompt('请输入体重(kg):')); */
+    /* var height = document.getElementById('height').value;
+    var weight = document.getElementById('weight').value; */
+    var height = parseFloat(prompt('请输入身高(m):'));
+    var weight = parseFloat(prompt('请输入体重(kg):'));
     var bmiBtn = document.getElementById('bmi_btn');
     var result = document.getElementById('result');
     bmiBtn.onclick = function () {
 
-        var bmi = weight / (height * height);
-
-        if (bmi < 18.5) {
-
-            result.innerHTML = ("过轻");
-        } else if (bmi < 25) {
-
-            result.innerHTML = ("正常");
-        } else if (bmi < 28) {
-
-            result.innerHTML = ("过重");
-        } else if (bmi < 32) {
-
-            result.innerHTML = ("肥胖");
+        var bmi = weight / height * height;
+        if (bmi > 32) {
+            result.innerHTML = ('严重肥胖');
+        } else if (bmi >= 28) {
+            result.innerHTML = ('肥胖');
+        } else if (bmi >= 25) {
+            result.innerHTML = ('过重');
+        } else if (bmi >= 18.5) {
+            result.innerHTML = ('正常');
         } else {
-
-            result.innerHTML = ("严重肥胖");
+            result.innerHTML = ('过轻');
         }
+        //result.innerHTML = ('BMI指数为：' + bmi.toFixed(2))
 
     }
 }

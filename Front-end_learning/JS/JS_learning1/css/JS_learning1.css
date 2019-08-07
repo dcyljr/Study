@@ -527,3 +527,25 @@ nav {
     background-position: 0 -139px;
     background-size: 100%
 }
+
+.box_BMI {
+    margin: 10px auto;
+    border: 1px solid #00aadc;
+    width: 300px;
+    padding: 10px;
+}
+
+.box_BMI input {
+    margin: 10px auto;
+    width: 60px;
+    height: 25px;
+    line-height: 25px;
+}
+
+.result {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #333;
+    margin: 10px auto;
+}

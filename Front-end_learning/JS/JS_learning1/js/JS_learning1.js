@@ -488,7 +488,6 @@ window.onload = function () {
     })
 
     //BMI判断
-    'use strict'
     /* var height = document.getElementById('height').value;
     var weight = document.getElementById('weight').value; */
     /* 
@@ -497,8 +496,9 @@ window.onload = function () {
     var bmiBtn = document.getElementById('bmi_btn');
     bmiBtn.onclick = function () {
         var height = document.getElementById('height').value; //获取身高参数
+        height = height / 100; //米换算成厘米
         var weight = document.getElementById('weight').value; //获取体重参数
-        /* var bmi = weight / (height * height); //BMI计算公式（体重除以身高的平方）
+        var bmi = weight / (height * height); //BMI计算公式（体重除以身高的平方）
 
         var result = document.getElementById('result');
         if (bmi > 32) {
@@ -511,20 +511,6 @@ window.onload = function () {
             result.innerHTML = ('正常');
         } else {
             result.innerHTML = ('过轻');
-        } */
-        var bmi = weight / (height * height);
-        if (isNaN(height && weight)) {
-            result.innerHTML = ("输入正确的数值")
-        } else if (bmi < 18.5) {
-            result.innerHTML = ("过轻")
-        } else if (bmi >= 18.5 && bmi < 25) {
-            result.innerHTML = ("正常")
-        } else if (bmi >= 25 && bmi < 28) {
-            result.innerHTML = ("过胖")
-        } else if (bmi >= 28 && bmi < 32) {
-            result.innerHTML = ("肥胖")
-        } else if (bmi >= 32) {
-            result.innerHTML = ("严重肥胖")
         }
 
     }

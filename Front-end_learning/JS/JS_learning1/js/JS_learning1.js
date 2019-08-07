@@ -500,18 +500,68 @@ window.onload = function () {
         var weight = document.getElementById('weight').value; //获取体重参数
         var bmi = weight / (height * height); //BMI计算公式（体重除以身高的平方）
 
-        var result = document.getElementById('result');
+        var b_result = document.getElementById('result');
         if (bmi > 32) {
-            result.innerHTML = ('严重肥胖');
+            b_result.innerHTML = ('严重肥胖');
         } else if (bmi >= 28 && bmi < 32) {
-            result.innerHTML = ('肥胖');
+            b_result.innerHTML = ('肥胖');
         } else if (bmi >= 25 && bmi < 28) {
-            result.innerHTML = ('过重');
+            b_result.innerHTML = ('过重');
         } else if (bmi >= 18.5 && bmi < 25) {
-            result.innerHTML = ('正常');
+            b_result.innerHTML = ('正常');
         } else {
-            result.innerHTML = ('过轻');
+            b_result.innerHTML = ('过轻');
         }
 
+    }
+
+    //计算器
+    var num1 = 0;
+    var num2 = '+';
+    var num3 = 0;
+    var x = null;
+    var arry = [];
+    var cResult = document.getElementsByClassName('c_result')[0];
+    for (var i = 0; i < 18; i++) {
+        var cbtn = document.getElementsByClassName('c_btn')[i];
+        cbtn.onclick = function () {
+            x = this.innerHTML;
+            main();
+        }
+    }
+
+    function main() {
+        if (!isNaN(x) || x === '.') { //判断变量x值是否为数字或.，如果逻辑运算符有一边条件成立，true
+            arry.push(x); //定义arry数组，然后第一次判断变量x的值可能为数值或者.，添加到arry数组末尾添加元素
+            cResult.innerHTML = arry.join(''); //arry数组所有元素放入一个字符串复制给变量cResult
+        } else if (x === 'C') { //判断变量值是否是c，如果是执行if里代码块，如果不是转向下一个判断
+            num1 = 0;
+            num2 = '+';
+            num3 = 0;
+            x = null;
+            arry = [];
+            cResult.innerHTML = num1; //变量赋值，清空数组
+        } else { //如果不是数值，不是.，不是c，则执行else代码块
+            num3 = parseFloat(arry.join('')); //解析字符串，返回一个浮点值，赋值num3
+            count();
+            cResult.innerHTML = num1;
+            arry = [];
+            num2 = x;
+        }
+    }
+
+    function count() {
+        if (num2 === '+') {
+            num1 += num3;
+        }
+        if (num2 === '-') {
+            num1 -= num3;
+        }
+        if (num2 === 'x') {
+            num1 *= num3;
+        }
+        if (num2 === '/') {
+            num1 /= num3;
+        }
     }
 }

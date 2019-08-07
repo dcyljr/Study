@@ -549,3 +549,108 @@ nav {
     border: 1px solid #333;
     margin: 10px auto;
 }
+
+.calculator {
+    width: 305px;
+    height: 360px;
+    background: #00aadc;
+    margin: 10px auto;
+    border-radius: 50px;
+}
+
+.c_result {
+    width: 295px;
+    height: 80px;
+    margin: 15px auto;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px red;
+    border-radius: 20px;
+    font-size: 24px;
+    text-indent: 1em;
+    line-height: 80px;
+    font-weight: 600;
+    animation: myfirst 5s;
+    -moz-animation: myfirst 5s;
+    /* Firefox */
+    -webkit-animation: myfirst 5s;
+    /* Safari and Chrome */
+    -o-animation: myfirst 5s;
+    /* Opera */
+}
+
+.c_btn_box {
+    margin: 0 10px;
+}
+
+.c_btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: #c9c9c9;
+    margin-right: 2.2px;
+    margin-bottom: 8px;
+    box-shadow: 2px 2px 10px blue;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+.b_btn {
+    width: 105px;
+}
+
+.operator {
+    background-color: yellow;
+}
+
+.position {
+    height: 100px;
+    top: -58px;
+    position: relative;
+}
+
+.c_btn:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+@-webkit-keyframes myfirst
+
+/* Safari and Chrome */
+    {
+    0% {
+        background: red;
+    }
+
+    25% {
+        background: yellow;
+    }
+
+    50% {
+        background: blue;
+    }
+
+    100% {
+        background: green;
+    }
+}
+
+@-o-keyframes myfirst
+
+/* Opera */
+    {
+    0% {
+        background: red;
+    }
+
+    25% {
+        background: yellow;
+    }
+
+    50% {
+        background: blue;
+    }
+
+    100% {
+        background: green;
+    }
+}

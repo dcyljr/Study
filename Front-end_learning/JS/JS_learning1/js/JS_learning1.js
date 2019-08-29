@@ -293,6 +293,31 @@ window.onload = function () {
         }
     }
 
+    //添加多个选项卡调用同一方法
+    tab("tabMain", "click");
+    tab("tabMain1", "click");
+    tab("tabMain2", "click");
+    tab("tabMain4", "click");
+
+    function tab(id, event) {
+        var oDiv = document.getElementById(id);
+        var oBtn = oDiv.getElementsByTagName("li");
+        var oBox = oDiv.getElementsByTagName("div");
+        for (var i = 0; i < oBtn.length; i++) {
+            //console.log(i)
+            (function (index) { //自执行函数
+                oBtn[index].addEventListener(event, function () {
+                    for (var i = 0; i < oBtn.length; i++) {
+                        oBtn[i].className = '';
+                        oBox[i].className = 'tabSide';
+                    }
+                    this.className = 'active';
+                    oBox[index].className = 'active';
+                }); //添加事件监听
+            })(i)
+        }
+    }
+
     //滚动图一:
     var rollBox = document.getElementById('roll_box');
     var rollUl = document.getElementById('u_roll');
@@ -564,4 +589,21 @@ window.onload = function () {
             num1 /= num3;
         }
     }
+
+    function Feedback() {
+        this.auditor = 'garbage';
+        this.date = new Date();
+        this.children = null;
+        this.print = () => {
+            console.log(`auditor->${this.auditor}`, `children->${this.children}`, `lasttime->${this.date}`)
+        }
+    }
+
+    const f = new Feedback();
+
+    f.print();
+
+    //over
+
+
 }

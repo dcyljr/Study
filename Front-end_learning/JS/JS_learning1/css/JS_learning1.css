@@ -313,6 +313,51 @@ nav {
     border: 1px solid #9c9c9c;
 }
 
+.tabMenu {
+    width: 300px;
+    margin: 50px auto 0 auto;
+}
+
+.tabMenu ul {
+    display: block;
+    overflow: hidden;
+    width: 300px;
+    height: 40px;
+    background: #eee;
+}
+
+.tabMenu ul li {
+    cursor: pointer;
+    display: block;
+    float: left;
+    width: 100px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+}
+
+.tabMenu ul li.active {
+    background: #f00;
+    color: #fff;
+}
+
+.tabMenu .tabSide {
+    display: none;
+    padding: 10px;
+    line-height: 20px;
+    width: 278px;
+    border: solid 1px #eee;
+}
+
+.tabMenu div.active {
+    display: block;
+    padding: 10px;
+    line-height: 20px;
+    width: 278px;
+    border: solid 1px #eee;
+}
+
 .roll_box {
     width: 44.375rem;
     height: 6.75rem;

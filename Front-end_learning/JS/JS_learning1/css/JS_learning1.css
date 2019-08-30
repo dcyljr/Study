@@ -358,6 +358,50 @@ nav {
     border: solid 1px #eee;
 }
 
+.wrap {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #000;
+    float: left;
+    margin-right: 20px;
+}
+
+.nav {
+    margin: 0;
+    width: 300px;
+    height: 50px;
+    border: 1px solid #000;
+}
+
+.nav span {
+    display: block;
+    float: left;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+
+}
+
+.nav .active {
+    background: #cc0000;
+    color: white;
+    cursor: pointer;
+}
+
+.wrap div {
+    width: 300px;
+    height: 250px;
+    font-size: 30px;
+    line-height: 250px;
+    text-align: center;
+    display: none;
+}
+
+.wrap .on {
+    display: block;
+}
+
 .roll_box {
     width: 44.375rem;
     height: 6.75rem;

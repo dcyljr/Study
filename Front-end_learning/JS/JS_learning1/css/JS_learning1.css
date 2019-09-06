@@ -702,6 +702,15 @@ nav {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
+#box {
+    width: 200px;
+    height: 200px;
+    background: orange;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 @-webkit-keyframes myfirst
 
 /* Safari and Chrome */

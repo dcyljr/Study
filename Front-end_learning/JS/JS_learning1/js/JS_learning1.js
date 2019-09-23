@@ -675,4 +675,25 @@ window.onload = function () {
             document.onmousemove = null;
         }
     }
+
+    //算法—JS生成随机密码
+    var oTn = document.getElementById('i_text');
+    var ocreatebtn = document.getElementById('create');
+    var endDiv = document.querySelector('.end');
+    var password = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o",
+        "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D",
+        "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S",
+        "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"
+    ];
+
+    function pass(length) {
+        var Str = "";
+        for (var i = 0; i < length; i++) {
+            Str += password[Math.floor(Math.random() * password.length)];
+        }
+        return Str;
+    }
+    ocreatebtn.onclick = function () {
+        endDiv.innerHTML = pass(oTn.value);
+    }
 }

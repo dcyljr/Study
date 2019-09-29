@@ -54,3 +54,8 @@ canvas {
     text-align: left;
     padding: 10px;
 }
+
+.demo1 ul{
+    display: flex;
+    flex-direction: column;
+}

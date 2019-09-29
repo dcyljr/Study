@@ -1,0 +1,214 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+}
+
+address,
+cite,
+dfn,
+em,
+var {
+    font-style: normal;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: courier new, courier, monospace;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+legend {
+    color: #000;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.clear {
+    clear: both;
+    float: none;
+    height: 0;
+    overflow: hidden;
+}
+
+#container {
+    width: 600px;
+    margin: 0 auto;
+}
+
+p {
+    line-height: 28px;
+}
+
+.hidden {
+    background: #E6E6E6;
+    text-align: center;
+    height: auto;
+    overflow: hidden;
+}
+
+.show {
+    background: #808080;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+}
+
+.ads {
+    margin: auto;
+    display: block;
+    width: 760px;
+    top: 0px;
+    border: solid 1px #000;
+    background-color: #fafafa;
+    overflow: hidden;
+    text-align: center;
+}
+
+.i_ads {
+    margin: auto;
+    width: 760px;
+    height: 200px;
+    border: solid 1px #000;
+    background-color: #fafafa;
+    text-align: center;
+}
+
+.float_layer {
+    width: 300px;
+    border: 1px solid #aaaaaa;
+    display: none;
+    background: #fff;
+}
+
+.float_layer h2 {
+    height: 25px;
+    line-height: 25px;
+    padding-left: 10px;
+    font-size: 14px;
+    color: #333;
+    background: url(../images/num1.jpg) repeat-x;
+    border-bottom: 1px solid #aaaaaa;
+    position: relative;
+}
+
+.float_layer .min {
+    width: 21px;
+    height: 20px;
+    background: url(../images/num2.jpg) no-repeat 0 bottom;
+    position: absolute;
+    top: 2px;
+    right: 25px;
+}
+
+.float_layer .min:hover {
+    background: url(../images/num2.jpg) no-repeat 0 0;
+}
+
+.float_layer .max {
+    width: 21px;
+    height: 20px;
+    background: url(../images/num3.jpg) no-repeat 0 bottom;
+    position: absolute;
+    top: 2px;
+    right: 25px;
+}
+
+.float_layer .max:hover {
+    background: url(../images/num3.jpg) no-repeat 0 0;
+}
+
+.float_layer .close {
+    width: 21px;
+    height: 20px;
+    background: url(../images/num4.jpg) no-repeat 0 bottom;
+    position: absolute;
+    top: 2px;
+    right: 3px;
+}
+
+.float_layer .close:hover {
+    background: url(../images/num4.jpg) no-repeat 0 0;
+}
+
+.float_layer .content {
+    height: 160px;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 18px;
+    color: #666;
+    text-indent: 28px;
+}
+
+.float_layer .wrap {
+    padding: 10px;
+}

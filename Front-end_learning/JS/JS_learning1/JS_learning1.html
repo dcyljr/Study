@@ -15,6 +15,17 @@
 </head>
 
 <body>
+
+    <!-- 广告自动展开缩起 -->
+    <div class="advert" id="container">
+        <div class="hidden" id="hid">
+            <p>广告图</p>
+        </div>
+        <div class="show" id="sho">
+            <p>成功</p>
+        </div>
+    </div>
+
     <!-- 原生JS+CSS实现一个简单带二级菜单顶部导航 -->
     <nav class="clearfix">
         <div class="topNavBar">
@@ -354,10 +365,52 @@
         <div class="end"></div>
     </div>
 
+
+
+
 </body>
 <script>
-    var pageWidth = window.innerWidth;
-    document.write('<style>html:{font-size:' + pageWidth + 'px;}</style>');
+    /* window.onload = function aa() {
+        show();
+        setTimeout("hide()", 3000);
+    }
+    var h = 0;
+    var hid = document.getElementById("hid");
+    var sho = document.getElementById("sho");
+
+    function show() {
+        if (h < 300) {
+            h += 5;
+            hid.style.height = h + "px";
+        } else {
+            return;
+        }
+        setTimeout("show()", 30);
+    }
+
+    function hide() {
+        if (h > 0) {
+            h -= 5;
+            hid.style.height = h + "px";
+        } else {
+            dd();
+            return;
+        }
+        setTimeout("hide()", 30);
+    }
+    var a = 0;
+
+    function dd() {
+        if (a < 60) {
+            a += 1;
+            sho.style.height = a + "px";
+        } else {
+            return;
+        }
+        setTimeout("dd()", 30);
+    } */
+    /* var pageWidth = window.innerWidth;
+    document.write('<style>html:{font-size:' + pageWidth + 'px;}</style>'); */
     /* three: */
     function alertEvent(text) {
         alert(text)

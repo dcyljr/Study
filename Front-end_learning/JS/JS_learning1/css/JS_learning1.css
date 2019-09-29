@@ -735,6 +735,29 @@ nav {
     margin: 5px auto;
 }
 
+.advert {
+    width: 600px;
+    margin: 10px auto;
+}
+
+.advert p {
+    line-height: 28px;
+}
+
+.hidden {
+    background: #e6e6e6;
+    text-align: center;
+    height: auto;
+    overflow: hidden;
+}
+
+.show {
+    background: #808080;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+}
+
 @-webkit-keyframes myfirst
 
 /* Safari and Chrome */

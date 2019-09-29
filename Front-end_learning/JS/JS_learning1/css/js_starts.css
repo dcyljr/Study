@@ -32,12 +32,25 @@ canvas {
 }
 
 .home {
-    width: 1100px;
-    height: 3000px;
+    width: 1060px;
+    height: auto;
     background: #fff;
     margin: 20px auto;
     z-index: 999;
     position: absolute;
     left: 0;
     right: 0;
+    padding: 20px;
+}
+
+.demo {
+    overflow: hidden;
+    height: 200px;
+    width: 250px;
+    border: 1px solid #6699cc;
+    font-size: 14px;
+    color: #336699;
+    line-height: 22px;
+    text-align: left;
+    padding: 10px;
 }

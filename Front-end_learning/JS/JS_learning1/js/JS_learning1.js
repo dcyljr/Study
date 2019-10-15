@@ -697,4 +697,32 @@ window.onload = function () {
         endDiv.innerHTML = pass(oTn.value);
     }
 
+    var createTable = document.getElementById('createTable');
+    createTable.onclick = function () {
+        var row = document.getElementById('row').value;
+        var col = document.getElementById('col').value;
+        var w = document.getElementById('w').value;
+        var h = document.getElementById('h').value;
+        var show = '';
+        var bgcolor;
+        show += '<table border="1" align="center" style="border-collapse:collapse;">';
+        for (var i = 0; i < row; i++) {
+            //外层循环,输出表格的行
+            if (i % 2 != 0) {
+                bgcolor = '#87ceeb';
+            } else {
+                bgcolor = '#ffffe0';
+            }
+            show += "<tr bgcolor='" + bgcolor + "'>";
+            for (var j = 0; j < col; j++) {
+                //内层循环,输出表格的列
+                show += '<td height="' + h + '"width="' + w + '"></td>';
+            }
+            show += '</tr>';
+        }
+        show += '</table>';
+        var result = document.getElementById('table');
+        result.innerHTML = show;
+    }
+
 }

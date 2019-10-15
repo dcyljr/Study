@@ -365,7 +365,30 @@
         <div class="end"></div>
     </div>
 
-
+    <!-- JS自定义输入行列宽高自动生成表格 -->
+    <table align="center">
+        <tr>
+            <td>行数：</td>
+            <td><input type="text" id="row" /></td>
+        </tr>
+        <tr>
+            <td>列数：</td>
+            <td><input type="text" id="col" /></td>
+        </tr>
+        <tr>
+            <td>宽度px：</td>
+            <td><input type="text" id="w" /></td>
+        </tr>
+        <tr>
+            <td>高度px：</td>
+            <td><input type="text" id="h" /></td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2"><input type="button" id="createTable" value="创建" />
+            </td>
+        </tr>
+    </table>
+    <div id="table"></div>
 
 
 </body>

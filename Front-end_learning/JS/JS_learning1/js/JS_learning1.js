@@ -726,4 +726,56 @@ window.onload = function () {
         result.innerHTML = show;
     }
 
+    //原生js实现闹钟
+    shi = document.getElementById('shi').value,
+        fen = document.getElementById('fen').value,
+        miao = document.getElementById('miao').value;
+    var input = document.getElementsByTagName('input');
+    var music = document.getElementById('music');
+    var gb = document.getElementById('gb');
+    for (i = 0; i < input.length; i++) {
+        //oninput事件在用户输入时触发。该事件在input或textarea元素的值发生改变时触发。
+        //提示：
+        //该事件类似于onchange事件。不同之处在于oninput事件在元素值发生变化时立即触发，onchange在元素失去焦点时触发。
+        //另外一点不同是onchange事件也可以作用于keygen和select元素。
+        input[i].oninput = function () {
+            shi = document.getElementById('shi').value,
+                fen = document.getElementById('fen').value,
+                miao = document.getElementById('miao').value;
+        }
+    }
+
+    function showtime() {
+        var time = new Date();
+        var hour = time.getHours();
+        var mine = time.getMinutes();
+        var sec = time.getSeconds();
+        var now_time = document.getElementById('now_time');
+        now_time.innerHTML = add0(hour) + ':' + add0(mine) + ':' + add0(sec);
+        var d1 = hour >= shi && mine >= fen && sec >= miao;
+        var d2 = hour >= shi && mine >= fen;
+        var d3 = hour >= shi;
+        if (d1 && d2 && d3) {
+            music.play(); //响铃
+            now_time.style.color = 'red';
+        } else {
+            music.pause();
+            now_time.style.color = '#000';
+        }
+    }
+    showtime();
+
+    function add0(m) {
+        if (m < 10) {
+            return '0' + m
+        } else {
+            return m
+        }
+    }
+
+    var timer = setInterval(showtime, 1000);
+    gb.onclick = function () {
+        shi = 24;
+    }
+
 }

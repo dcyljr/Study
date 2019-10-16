@@ -390,6 +390,20 @@
     </table>
     <div id="table" class="table_lis"></div>
 
+    <!-- JS闹钟 -->
+    <div class="clock">
+        现在是北京时间:
+        <span class="now_time" id="now_time"></span>
+        <audio src="./video/1468172227.mp3" preload="auto" id="music"></audio>
+        <!-- preload规定当网页加载时，音频是否默认被加载以及如何被加载。auto - 当页面加载后载入整个音频 -->
+        请设定闹钟时间:
+        <input type="number" value="23" id="shi" size="1" min="0" max="23">
+        <input type="number" value="00" id="fen" size="1" min="0" max="59">
+        <input type="number" value="00" id="miao" size="1" min="0" max="59">
+        <!-- size属性规定以字符数计的<input>元素的可见宽度。（即输入的字符数） -->
+        <input type="button" value="关闭闹钟" id="gb" size="2">
+    </div>
+
 
 </body>
 <script>

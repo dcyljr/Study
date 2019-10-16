@@ -758,6 +758,10 @@ nav {
     overflow: hidden;
 }
 
+.table_lis {
+    margin: 10px auto;
+}
+
 @-webkit-keyframes myfirst
 
 /* Safari and Chrome */

@@ -697,6 +697,7 @@ window.onload = function () {
         endDiv.innerHTML = pass(oTn.value);
     }
 
+    //JS自定义输入行列宽高自动生成表格
     var createTable = document.getElementById('createTable');
     createTable.onclick = function () {
         var row = document.getElementById('row').value;

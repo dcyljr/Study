@@ -17,24 +17,42 @@ window.onload = function () {
     /* 单独调用结束// */
 
     /* 调用同一方法开始： */
-    eVent('block', 'onmouseover');//调用函数
+    eVent('block', 'onmouseover'); //调用函数
     eVent('cite', 'onmouseover');
+
     function eVent(id, event) {
-        var ev = document.getElementById(id);//定义变量获取id
-        ev[event] = function () {//调用方法 执行事件
+        var ev = document.getElementById(id); //定义变量获取id
+        ev[event] = function () { //调用方法 执行事件
             var cite = document.getElementById('cite');
             cite.style.display = 'block';
         }
     }
 
-    function onevent(id,onevent){
-        var onev=document.getElementById(id);
-        onev[onevent]=function(){
+    function onevent(id, onevent) {
+        var onev = document.getElementById(id);
+        onev[onevent] = function () {
             var cite = document.getElementById('cite');
             cite.style.display = 'none';
         }
     }
-    onevent('block','onmouseout');
-    onevent('cite','onmouseout');
+    onevent('block', 'onmouseout');
+    onevent('cite', 'onmouseout');
     /* 调用同一方法结束// */
+
+    //卡片翻转（一）：
+    ineVent('card1', 'onclick');
+    ineVent('card2', 'onclick');
+    ineVent('card3', 'onclick');
+    function ineVent(id, ineVent) {
+        var card = document.getElementById(id);
+        card[ineVent] = function () {
+            if (card.className === 'card') {
+                if (card.style.transform == "rotateY(180deg)") {
+                    card.style.transform = "rotateY(0deg)";
+                } else {
+                    card.style.transform = "rotateY(180deg)";
+                }
+            }
+        }
+    }
 }

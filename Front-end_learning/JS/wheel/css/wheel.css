@@ -70,10 +70,47 @@ li {
     display: none;
 }
 
-#arrow-right {
-    right: 0;
+.wheel_body {
+    overflow: hidden;
+    height: 400px;
+    width:1100px;
+    margin:20px auto;
 }
 
-#arrow-left {
-    left: 0;
+.move_box {
+    margin: 0 auto;
+    width: 1100px;
+    height: 335px;
+    overflow: hidden
 }
+
+.move_box_tab {
+    height: 335px;
+}
+
+.btn_box {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: space-between;
+}
+
+.btn_box button {
+    border: none;
+    background: #d9d9d9;
+    opacity: 0.3;
+    width: 20px;
+    height: 20px;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* .move_btn {
+    display: none;
+} */

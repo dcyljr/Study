@@ -762,6 +762,56 @@ nav {
     margin: 10px auto;
 }
 
+.unit {
+    width: 500px;
+    height: auto;
+    padding: 30px;
+    margin: 20px auto;
+    border: 1px solid #00aadc;
+}
+
+.nuit_ul {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: space-between;
+    -webkit-align-items: center;
+}
+
+.nuit_ul li {
+    flex-grow: 0;
+    flex-shrink: 0;
+    -webkit-flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    width: 98px;
+    height: 198px;
+    border: 1px solid #cc0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    cursor: pointer;
+}
+
+.nuit_ul li h4 {
+    color: #019aed;
+}
+
+.nuit_ul .nuit_li {
+    background-color: #019aed;
+}
+
+.nuit_ul .nuit_li h4 {
+    color: #fff;
+}
+
 @-webkit-keyframes myfirst
 
 /* Safari and Chrome */

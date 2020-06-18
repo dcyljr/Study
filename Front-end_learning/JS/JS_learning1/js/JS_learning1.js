@@ -778,4 +778,18 @@ window.onload = function () {
         shi = 24;
     }
 
+    //鼠标移入移出列表事件
+    var nuitBox = document.getElementById('nuitbox');
+    var nuitLi = nuitBox.getElementsByTagName('li');
+    for (var i = 0; i < nuitLi.length; i++) {
+        nuitLi[i].onmouseover = function (e) {
+            var li=e.currentTarget;
+            li.classList.add('nuit_li');
+        }
+        nuitLi[i].onmouseout = function (e) {
+            var li=e.currentTarget;
+            li.classList.remove('nuit_li');
+        }
+    }
+
 }

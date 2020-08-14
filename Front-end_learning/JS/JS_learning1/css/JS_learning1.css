@@ -74,6 +74,13 @@ nav {
     display: block;
 }
 
+.umenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 .cli_div {
     margin: 1.25rem auto;
     width: 31.25rem;
@@ -810,6 +817,52 @@ nav {
 
 .nuit_ul .nuit_li h4 {
     color: #fff;
+}
+
+.wraptab {
+    width: 240px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: space-between;
+    -webkit-align-items: center;
+    margin: 50px auto 0 auto;
+    background-color: #019aed;
+    overflow: hidden;
+}
+
+.wraptab li {
+    width: 80px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.wraptab .gct {
+    background-color: #cc0000;
+}
+
+.wrapcon {
+    width: 238px;
+    height: 200px;
+    border: 1px solid #00aadc;
+    margin: 0 auto 50px auto;
+    overflow: hidden;
+}
+
+.abcon {
+    width: 100%;
+    height: 200px;
+    display: none;
+}
+
+.block_ab {
+    display: block;
 }
 
 @-webkit-keyframes myfirst

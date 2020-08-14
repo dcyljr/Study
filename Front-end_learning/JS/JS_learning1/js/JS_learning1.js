@@ -13,6 +13,23 @@ window.onload = function () {
         }
     }
 
+    //为每个菜单项‘p’标签注册单击事件
+    var ps = document.getElementById('umenu').getElementsByTagName('p');
+    //遍历所有'p'标签,为每个‘p’标签注册一个单击事件
+    for (var i = 0; i < ps.length; i++) {
+        //为每个‘p’标签注册单击事件
+        ps[i].onmouseenter = function () {
+            //找到'P'标签后面的ul标签
+            var nextUL = this.parentNode.getElementsByTagName("ul")[0];
+            //判断该标签显示还是隐藏，如果显示则隐藏，如果隐藏则显示
+            if (nextUL.style.display != 'none') {
+                nextUL.style.display = 'none'
+            } else {
+                nextUL.style.display = 'block'
+            }
+        }
+    }
+
     var t_btn = document.getElementById('btn');
     t_btn.onclick = function () {
         var x = document.getElementsByClassName('text');
@@ -272,6 +289,7 @@ window.onload = function () {
 
 
 
+
     //选项卡:
     var tabMenu = document.getElementById('tab_menu');
     var menuLi = tabMenu.getElementsByTagName('li');
@@ -291,6 +309,24 @@ window.onload = function () {
             menuLi[m].className = '';
             conTab[m].style.display = 'none';
         }
+    }
+
+    //选项卡2
+    var wrapTab = document.getElementById('tabwrap');
+    var gct = wrapTab.getElementsByTagName('li');
+    var conBox = document.getElementById('conbox');
+    var abBlock = conBox.getElementsByClassName('abcon');
+    for (var x = 0; x < gct.length; x++) {
+        (function (i) {
+            gct[x].onclick = function () {
+                for (var v = 0; v < gct.length; v++) {
+                    gct[v].className = '';
+                    abBlock[v].classList.remove('block_ab');
+                }
+                this.className = 'gct';
+                abBlock[i].classList.add('block_ab');
+            }
+        }(x))
     }
 
     //添加多个选项卡调用同一方法
@@ -783,11 +819,11 @@ window.onload = function () {
     var nuitLi = nuitBox.getElementsByTagName('li');
     for (var i = 0; i < nuitLi.length; i++) {
         nuitLi[i].onmouseover = function (e) {
-            var li=e.currentTarget;
+            var li = e.currentTarget;
             li.classList.add('nuit_li');
         }
         nuitLi[i].onmouseout = function (e) {
-            var li=e.currentTarget;
+            var li = e.currentTarget;
             li.classList.remove('nuit_li');
         }
     }

@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+a,
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.container {
+    position: relative;
+    height: 70px;
+    width: 1100px;
+    margin: 20px auto;
+    overflow: hidden;
+
+}
+
+.pics {
+    z-index: 1;
+    position: absolute;
+    width: 3300px;
+    height: 70px;
+}
+
+.pics img {
+    float: left;
+    width: 1100px;
+    height: 70px;
+}
+
+.change {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: space-between;
+    -webkit-align-items: center;
+    margin-top: 25px;
+}
+
+.arrow {
+    z-index: 99;
+    font-size: 16px;
+    z-index: 2;
+    display: none;
+    font-weight: bold;
+    line-height: 20px;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    background-color: RGBA(0, 0, 0, .3);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.buttons {
+    z-index: 99;
+    position: absolute;
+    bottom: 10px;
+    left: 45%;
+    display: none;
+}
+
+.button {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    color: black;
+    background: RGBA(0, 0, 0, .3);
+}
+
+.on {
+    background: pink;
+}

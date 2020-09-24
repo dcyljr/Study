@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>录入5名学员成绩</title>
+</head>
+<body>
+<script>
+    //循环录入5名学员成绩成绩，如果为负数，对当前学员成绩作废，但是，其后学员继续；
+    // 否则，输出5名学员成绩
+    for(var i = 1;i<=5;i++){
+        var score = prompt("请输入成绩");
+        if(score < 0){
+            document.write("第"+i+"名学员的成绩有误，成绩作废！<br/>");
+            //如果输入为负数，结束本次for循环，不执行break后的输出学员成绩语句
+            //但是后面的循环会继续
+            continue;
+        }
+        document.write("第"+i+"名学员的成绩是："+score+"<br/>")
+    }
+</script>
+</body>
+</html>

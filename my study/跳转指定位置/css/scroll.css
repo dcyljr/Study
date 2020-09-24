@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a,
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+#scrollBody {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: scroll;
+    height: 300px;
+}
+
+#scrollBody div {
+    font-size: 20px;
+    height: 100px;
+}
+
+#button {
+    position: relative;
+    top: 350px;
+}
+
+#nav {
+    position: fixed;
+    left: 0;
+    top: 10px;
+}
+
+#nav li {
+    width: 50px;
+    height: 30px;
+    font: bold 20px/30px simhei;
+    text-align: center;
+    background: #333;
+    color: #fff;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+#list li {
+    width: 50%;
+    height: 300px;
+    text-align: center;
+    font: bold 100px/300px simhei;
+    background: yellow;
+    color: blue;
+    margin: 50px 200px;
+}
+
+.eat{
+    background: cyan;
+    height:500px;
+}
+
+.sleep{
+    background:lightgreen;
+    height:2000px;
+}
+
+.walk{
+    background:lightsalmon;
+    height:1000px;
+}

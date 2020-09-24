@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>统计大于等于80学员个数</title>
+</head>
+<body>
+<script>
+    var total = prompt("请输入班级总人数：");
+    var num = 0; //统计大于等于80的学员个数
+    var flag = true; //用户是否正常输入成绩
+
+    for(var i =1;i<=total ; i++){
+        var score = prompt("请输入第"+i+"个学员的成绩：");
+        if(score>=80){
+            num++;
+        }else if(score<0){
+            //输入负数,终止成绩统计
+            flag = false; //记录你违规操作
+            break;
+        }
+    }
+
+    if(flag){
+        document.write("80分以上的学员个数是："+num);
+    }else{
+        document.write("学员成绩不能为负数，无法完成统计！");
+    }
+
+</script>
+</body>
+</html>

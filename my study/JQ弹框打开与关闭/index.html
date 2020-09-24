@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JQ弹框的打开与关闭</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <p id="open">打开弹框</p>
+    <!-- 弹出框(底层滤镜+内容部分+关闭按钮) -->
+    <!-- 底层滤镜 -->
+    <div id="cslj">
+        <!-- 内容部分 -->
+        <div class="qhcq">
+            <!-- 关闭按钮 -->
+            <div class="tcc" id="gba">x
+            </div>
+            <!-- 内容 -->
+            <div class="abc">。。。。。</div>
+        </div>
+    </div>
+
+    <!-- 点击空白处关闭弹出窗口 -->
+    <!-- eg1: -->
+    <div class="pop">点击范围外即隐藏</div>
+    <!-- eg2: -->
+    <div class="down">click</div>
+    <div class="con hide">show-area</div>
+    <!-- eg3: -->
+    <div id="box">点空白处关闭</div>
+    <span class="btn">打开弹出层</span>
+</body>
+
+</html>

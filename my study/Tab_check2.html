@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang="en">
+
+    <meta charset="UTF-8">
+
+    <title>发现</title>
+
+    <style>
+        .myfriends {
+
+            position: relative;
+
+            width: 130px;
+
+            height: 30px;
+            /*父元素的容器高30px*/
+
+        }
+
+
+
+        .myfriendsList {
+
+            position: absolute;
+            /**/
+
+            width: 80px;
+
+            height: 100px;
+
+            top: 40px;
+            /*建议top值不要太大*/
+
+            left: 9px;
+
+            z-index: 10;
+
+            border: solid 1px #c6c6c6;
+
+            background-color: #f2f2f2;
+
+            display: none;
+
+        }
+    </style>
+
+
+
+    <script>
+        window.onload = function () {
+
+            divShow('myfriendsList', 'myfriends');
+
+        }
+
+
+
+        function getID(id) {
+
+            return document.getElementById(id)
+
+        }
+
+
+
+        function divShow(idson, idFather) {
+
+            var idSon = getID(idson);
+
+            var idFather = getID(idFather);
+
+            var timer = null;
+
+
+
+            idFather.onmousemove = show;
+
+            idFather.onmouseout = hide;
+
+
+
+            function show() {
+
+                clearInterval(timer);
+
+                idSon.style.display = "block";
+
+            }
+
+
+
+            function hide() {
+
+                timer = setTimeout(function () {
+
+                    idSon.style.display = "none"
+
+                }, 200)
+
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class="myfriends" id="myfriends">
+
+        我的好友
+
+        <div class="myfriendsList" id="myfriendsList">
+
+            <ul>
+
+                <li><a href="">闺蜜</a></li>
+
+                <li><a href="">同学</a></li>
+
+                <li><a href="">创建分组</a></li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

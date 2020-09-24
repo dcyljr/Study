@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+div,
+ul,
+li,
+a {
+    list-style: none;
+    text-decoration: none;
+    font-weight:normal;
+}
+
+#tabBox,#t_tabBox,.tab{
+    width:420px;
+    margin:30px auto;
+}
+
+#tabBox li,#t_tabBox li,.tab li{
+    float: left;
+    width:100px;
+    background-color: #ccc;
+    color:#09f;
+    height:30px;
+    line-height:30px;
+    cursor: pointer;
+    margin-right: 3px;
+    font-weight:bold;
+}
+
+#tabBox li.tabIn,#t_tabBox li.t_tabIn{
+    background-color: #999;
+    color: #f0f;
+}
+
+#tabBox div{
+    width:400px;
+    padding: 15px 5px;
+    color:#000;
+    height: 135px;
+    clear: left;
+    display:none;
+    background-color: #999;
+}
+
+#tabBox div.tabCont{
+    display:block;
+}
+
+#kk{
+    width:430px;
+    color:#fff;
+    height:135px;
+    overflow: hidden;
+}
+
+#kk div{
+    display:none;
+    background-color: #999;
+    height:135px;
+    width:400px;
+    padding: 15px 5px;
+}
+
+#kk div.t_tabCont{
+    display:block;
+}
+
+.s_tab .tabcontent{
+    display: none;
+    background-color: #999;
+    height: 135px;
+    width: 400px;
+    padding: 15px 5px;
+}

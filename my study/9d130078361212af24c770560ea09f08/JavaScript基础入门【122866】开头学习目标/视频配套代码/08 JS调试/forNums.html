@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>计算1-10之间偶数之和</title>
+</head>
+<body>
+<script>
+    //语法错误
+    /*var sum = 0; //偶数和
+    for(var i = 1, i<=10 ; i++){
+        if(i%2==1) {
+            sum += i;
+
+    }
+    document.write("1-10之间的偶数和是："+sum);*/
+
+    //逻辑错误  断点调试
+   /* var sum = 0; //偶数和
+    for(var i = 1; i<=10 ; i++){
+        if(i%2==1) {
+            sum += i;
+        }
+    }
+    document.write("1-10之间的偶数和是："+sum);*/
+
+    //alert() 调试
+    var sum = 0; //偶数和
+    for(var i = 1; i<=10 ; i++){
+        if(i%2==1) {
+            sum += i;
+            alert(i);
+        }
+    }
+    document.write("1-10之间的偶数和是："+sum);
+</script>
+</body>
+</html>

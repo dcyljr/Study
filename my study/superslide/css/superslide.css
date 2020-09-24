@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 20px 20px;
+}
+
+body,
+div,
+ul {
+    text-align: center;
+}
+
+a,
+li,
+p,
+span,
+input,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+
+.leftMarqueen {
+    width: 1098px;
+    height: 40px;
+    line-height: 40px;
+    margin: 10px auto;
+    border: 1px solid #c0c0c0;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* .leftMarqueen .leftMarqueen {
+    position: relative;
+    width: 1025px;
+    overflow: hidden;
+    float: right;
+    margin-right: 20px;
+} */
+
+.leftMarqueen ul {
+    width: 12000px;
+    height:40px;
+    line-height: 40px;
+    position: absolute;
+}
+
+.leftMarqueen ul li {
+    float: left;
+    margin: 0 8px;
+    height: 40px;
+    position: relative;
+}
+
+.leftMarqueen ul li a{
+    color:#494949;
+    display: block;
+    height: 40px;
+    line-height:40px;
+    width:100%;
+    position: relative;
+}

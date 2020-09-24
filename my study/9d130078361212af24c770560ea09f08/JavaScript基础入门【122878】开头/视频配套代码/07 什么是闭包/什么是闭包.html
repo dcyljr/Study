@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>什么是闭包</title>
+</head>
+<body>
+<script>
+    /*var num = 1;
+    function f1(){
+        alert(num);
+    }
+    f1();*/
+
+    //我们无法在函数外部访问函数里面的局部变量
+    /*function f1(){
+        var num = 1;
+    }
+    alert(num);*/
+
+    //问题：如何在函数外部访问函数里面的局部变量？
+    //(1)f1外层函数中声明了一个内部函数f2，通过f2去操作f1的局部变量
+    //（2）返回f2
+    function f1(){
+        var num = 1;
+        function f2(){
+            alert(num);  //1
+        }
+        return f2;
+    }
+
+    var result = f1();
+    result();
+</script>
+</body>
+</html>

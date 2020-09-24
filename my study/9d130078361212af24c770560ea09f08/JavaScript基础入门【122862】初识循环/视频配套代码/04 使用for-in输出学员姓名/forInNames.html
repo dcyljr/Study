@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>使用for-in输出学员姓名</title>
+</head>
+<body>
+<script>
+    //使用字符串数组存储了多个学员姓名（元素）---下标 0
+    var names = ["Tom","Anne","Jerry"];
+    /*
+     document.write(names[0]);
+    document.write(names[1]);
+     document.write(names[2]);*/
+
+   /* for(var index = 0;index<=2;index++){
+        document.write(names[index]+"<br/>");
+    }*/
+
+    for(var index in names){
+        document.write(names[index]+"<br/>");
+    }
+
+</script>
+</body>
+</html>

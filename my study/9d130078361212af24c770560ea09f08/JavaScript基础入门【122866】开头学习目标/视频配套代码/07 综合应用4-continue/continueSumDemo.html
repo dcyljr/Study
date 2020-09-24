@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>使用continue获得1-10之间的偶数和</title>
+</head>
+<body>
+<script>
+    /*未使用continue
+    var sum = 0; //总和
+    for(var i = 1; i<=10 ;i++){
+        if(i%2==0){ //偶数
+            sum += i;
+        }
+    }
+    document.write("1-10之间的偶数和是："+sum);*/
+    var sum = 0; //总和
+    for(var i = 1; i<=10 ;i++){
+        if(i%2==1){ //奇数
+            continue;
+        }
+        sum += i;
+    }
+    document.write("1-10之间的偶数和是："+sum);
+</script>
+</body>
+</html>

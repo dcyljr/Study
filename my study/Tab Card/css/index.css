@@ -1,0 +1,586 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+    color: #333232;
+    text-align: center;
+}
+
+body {
+    background: #f0f0ef;
+}
+
+/* 
+ul {
+    list-style: none;
+    margin-top: 100px;
+}
+
+li {
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#content {
+    height: 800px;
+    width: 70%;
+    background: #eee;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    height: 300px;
+    width: 20%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.tb-place {
+    position: absolute;
+    left: 24%;
+    top: 0;
+    padding: 10px;
+    background: #fff;
+    height: 300px;
+    display: none;
+    border-radius: 5px;
+}
+
+.show {
+    display: block;
+}
+
+.bottom {
+    border-bottom: 4px double red;
+} */
+
+
+.home {
+    width: 100%;
+    height: auto;
+}
+
+.logo-head {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    padding: 10px 0;
+}
+
+.logo-head .logo-img {
+    width: 1000px;
+    margin: 0 auto;
+    height: 61px;
+    line-height: 61px;
+    text-align: left;
+}
+
+.logo-img img {
+    width: 242px;
+    height: 61px;
+}
+
+.home .nav {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #ae1c1c;
+}
+
+.nav .tab {
+    width: 1000px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+}
+
+.tab li {
+    float: left;
+    border-right: 1px solid #d46c22;
+    padding: 0 51px;
+}
+
+.tab li:last-child {
+    border-right: none;
+}
+
+.tab li a {
+    display: block;
+    color: #fff;
+    padding: 0 20px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.tab li .t-tabIn {
+    background: #c02f2f url(../images/Triangle.png) no-repeat center 29px;
+}
+
+.tab li a {
+    color: #fff;
+}
+
+.tab-content {
+    width: 1000px;
+    padding: 30px 0;
+    height: auto;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.tab-content .tab-card {
+    display: none;
+}
+
+.tab-content div.tab-block {
+    display: block;
+}
+
+/* 关于我们 */
+.bri-introduction {
+    padding: 0 52px;
+    margin: 0 auto;
+}
+
+.a-company h3,
+.net-c h3 {
+    height: 30px;
+    line-height: 30px;
+    color: #333232;
+    font-size: 24px;
+    text-align: left;
+    background: url(../images/gsjj.png) no-repeat left;
+    background-size: 24px;
+    text-indent: 40px;
+    width: 850px;
+    margin: 0 auto;
+    font-weight: normal;
+}
+
+.bri-introduction .a-company p {
+    width: 783px;
+    text-indent: 20px;
+    font-size: 16px;
+    color: #333232;
+    line-height: 30px;
+    text-align: left;
+    margin-left: 140px;
+}
+
+.net-c {
+    margin-top: 38px;
+    display: flex;
+    flex-direction: column;
+}
+
+.net-c h3 {
+    background: url(../images/td.png) no-repeat left;
+}
+
+body .characteristic {
+    text-align: left;
+    display: flex;
+    justify-content: space-around;
+    height: 420px;
+    padding-bottom: 30px;
+}
+
+.l-tab,
+.center-bar,
+.r-tab {
+    flex: 1;
+}
+
+.l-tab,
+.t-tab,
+.b-tab {
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+
+}
+
+.l-tab {
+    margin-top: 70px;
+}
+
+.l-tab-text {
+    position: relative;
+    right: 12px;
+    width: 288px;
+}
+
+.tab-text h4 {
+    font-size: 22px;
+    font-weight: normal;
+    width: 92px;
+    margin: 0 auto;
+}
+
+.l-tab-text h4 {
+    color: #394dd0;
+}
+
+.tab-text p {
+    font-size: 16px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.t-img {
+    position: relative;
+    width: 159px;
+}
+
+.t-img img {
+    float: left;
+    position: relative;
+}
+
+.right-img {
+    right: 14px;
+}
+
+.right-img img {
+    left: 24px;
+}
+
+.dotted {
+    width: 59px;
+    height: 13px;
+    position: relative;
+}
+
+.dotted-1 {
+    background: url(../images/dotted-1.png) no-repeat center;
+    left: 122px;
+    top: 42px;
+}
+
+.center-bar {
+    border-right: 1px dashed #000;
+    height: 390px;
+    flex: 0 0 0.1%;
+    margin-top: 29px;
+}
+
+.dotted-3 {
+    background: url(../images/dotted-3.png) no-repeat center;
+    top: 56px;
+    right: 8px;
+}
+
+.g-img img {
+    left: 49px;
+}
+
+.r-tab-text {
+    width: 288px;
+}
+
+.r-tab-text h4 {
+    color: #cb3333;
+}
+
+.dotted-2 {
+    background: url(../images/dotted-2.png) no-repeat center;
+    top: 5px;
+    right: 8px;
+}
+
+.b-img img {
+    left: 49px;
+    bottom: 55px;
+}
+
+.b-tab {
+    margin-top: 235px;
+}
+
+.b-tab-text {
+    position: relative;
+    bottom: 60px;
+    left: 9px;
+    width: 288px;
+}
+
+.b-tab-text h4 {
+    color: #e67610;
+}
+
+/* 联系我们 */
+.contact_us {
+    width: 100%;
+    height: auto;
+}
+
+.contact_us ul {
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.contact_us ul li {
+    flex: 1;
+}
+
+.dz-logo {
+    position: relative;
+    z-index: 999;
+    background: #fff;
+    width: 116px;
+    height: 116px;
+    margin: 0 auto;
+}
+
+.i-inf {
+    position: relative;
+    border: 2px solid #ea9e32;
+    width: 200px;
+    margin: 0 auto;
+    bottom: 55px;
+    padding: 70px 15px 0 15px;
+    height: 138px;
+}
+
+.i-inf h4 {
+    color: #db922a;
+    font-size: 23px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.i-inf p {
+    color: #db922a;
+    font-size: 16px;
+    text-align: left;
+    line-height: 24px;
+}
+
+.i-address p {
+    width: 171px;
+    margin: 0 auto;
+}
+
+.i-iphone {
+    padding-left: 25px;
+}
+
+.w-inf {
+    width: 170px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.w-number {
+    width: 100px;
+    float: left;
+}
+
+.w-number p {
+    text-align: center;
+}
+
+.w-img {
+    float: right;
+    width: 70px;
+    height: 72px;
+}
+
+.w-img img {
+    width: 100%;
+    height: 72px;
+}
+
+.baidu_map {
+    width: 700px;
+    margin: 0 auto;
+}
+
+.iw_poi_title {
+    color: #CC5522;
+    font-size: 14px;
+    font-weight: bold;
+    overflow: hidden;
+    padding-right: 13px;
+    white-space: nowrap
+}
+
+.iw_poi_content {
+    font: 12px arial, sans-serif;
+    overflow: visible;
+    padding-top: 4px;
+    white-space: -moz-pre-wrap;
+    word-wrap: break-word
+}
+
+/* 广告服务 */
+.ad_service {
+    padding: 10px 30px;
+    margin: 40px 30px 40px 112px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 672px;
+}
+
+.ad_top_service {
+    margin-top: 20px;
+}
+
+.ad_l_logo {
+    float: left;
+    width: 60px;
+    height: 60px;
+}
+
+.ad_l_logo img {
+    width: 100%;
+    height: 60px;
+}
+
+.ad_text {
+    padding: 5px;
+    background: #e99825;
+    border-radius: 15px;
+    width: 570px;
+    margin-left: 30px;
+}
+
+.ad_content {
+    background: #fff;
+    height: 100px;
+    line-height: 20px;
+    border-radius: 15px;
+    width: 457px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    padding: 15px 13px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ad_content p {
+    text-align: left;
+    width: 448px;
+}
+
+.ad_la_service {
+    margin-bottom: 20px;
+}
+
+.ad_wx {
+    flex-direction: row;
+}
+
+
+.ad_wx_p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 94px;
+    height: 50px;
+    margin-top: 30px;
+    width: 272px;
+}
+
+/* 免责声明 */
+.att {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    margin-left: 100px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.att h4 {
+    width: 80px;
+    color: #c34140;
+    font-size: 25px;
+    margin-left: 7px;
+    font-weight: normal;
+}
+
+.att-content {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.l_att_bar {
+    height: 380px;
+    width: 117px;
+    background: url(../images/m_bar.png) no-repeat center;
+    margin-left: 208px;
+}
+
+.r_att_text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.a_text {
+    width: 480px;
+}
+
+.a_text1 {
+    margin-top: 4px;
+}
+
+.a_text2 {
+    margin-top: 73px;
+}
+
+.a_text3 {
+    margin-top: 98px;
+}
+
+.a_text p {
+    text-align: left;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+
+/* footer */
+.footer {
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+    background: #ae1c1c url(../images/f-img.png) no-repeat right 70px
+}
+
+.footer p {
+    height: 25px;
+    line-height: 25px;
+    color: #fff;
+    font-size: 12px;
+}

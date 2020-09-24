@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>while或do-while计算100之内的偶数和</title>
+</head>
+<body>
+<script>
+    /*使用while
+    var sum  = 0; //总和
+    var num = 1; //循环变量初始化
+    while(num<=100){
+        if(num%2==0){ //偶数
+            sum += num ; //sum=sum+num;
+        }
+        num++; //变量迭代
+    }
+    document.write("100之内的偶数和是："+sum);*/
+    //使用do-while
+    var sum  = 0; //总和
+    var num = 1; //循环变量初始化
+    do{
+        if(num%2==0){ //偶数
+            sum += num ; //sum=sum+num;
+        }
+        num++; //变量迭代
+    }while(num<=100);
+    document.write("100之内的偶数和是："+sum);
+</script>
+</body>
+</html>

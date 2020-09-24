@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body style="text-align: center;">
+<!--<h3>打印倒正金字塔直线</h3>
+<hr width="61%"/>
+<hr width="51%"/>
+<hr width="41%"/>
+<hr width="31%"/>
+<hr width="21%"/>
+<hr width="11%"/>
+<hr width="1%"/>
+<hr width="11%"/>
+<hr width="21%"/>
+<hr width="31%"/>
+<hr width="41%"/>
+<hr width="51%"/>
+<hr width="61%"/>-->
+</body>
+<script>
+document.write("<h3>打印倒正金字塔直线</h3>");
+    //打印倒三角形
+    /*var i = 61;
+    while(i>0){
+        document.write("<hr width="+i+"%/>");
+        i = i-10;
+    }*/
+    var i = 61;
+    do{
+        document.write("<hr width="+i+"%/>");
+        i = i-10;
+    }while(i>0);
+    //打印正三角形
+    for(var j = 11;j<70;j=j+10){
+        document.write("<hr width="+j+"%/>");
+    }
+
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>声明和输出数组元素</title>
+</head>
+<body>
+<script>
+    //回顾
+    /*var nums = [98,100,87,64];
+    for(var index in nums){
+        document.write(nums[index]+"<br/>");
+    }*/
+
+    //var nums = new Array(100,98,87);
+    //即便声明了数组的长度，还是会根据实际赋值来填充数组
+    //var nums = new Array(3);
+    var nums = new Array();
+    nums[0] = 100;
+    nums[1] = 98;
+    nums[2] = 87;
+    nums[3] = 75;
+    nums[4] = 99;
+    nums[5] = 100;
+    /*document.write(nums);*/
+    for(var index in nums){
+        document.write(nums[index]+"<br/>");
+    }
+</script>
+</body>
+</html>

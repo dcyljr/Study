@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>闭包的应用-计数器</title>
+</head>
+<body>
+<script>
+    //如下代码能实现计数器的功能，但是也有个问题：
+    //页面上的任何脚本都能改变这个计数器，即使没有add()
+    //因为count是全局的变量
+    /*var count = 0; //统计数值
+    //计数
+    function add(){
+        count += 1;
+        alert(count);
+    }
+
+    add();
+    add();
+    add();*/
+
+    //修改count为计数器的局部变量，计数器函数
+    //新的问题：没有达到计数的效果，count = 1
+    //原因：每次调用add()，count重新赋值0
+    /*function add(){
+        var count = 0;
+        count += 1;
+        alert(count);
+    }
+
+    add();
+    add();
+    add();*/
+
+    //计数器：（1）count计数器的局部变量（2）每次count能是从新的计数基础开始
+    function add(){
+        var count = 0;
+        function getCount(){
+            count +=1 ;
+            alert(count);
+        }
+        return getCount;
+    }
+
+    var result = add();
+    result();
+    result();
+    result();
+</script>
+</body>
+</html>

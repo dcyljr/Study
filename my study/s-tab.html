@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script> -->
+</head>
+
+<body>
+    <style type="text/css">
+        ul {
+            list-style: none;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #tab {
+            border: 1px solid #ccc;
+            margin: 20px auto;
+            width: 403px;
+            border-top: none;
+        }
+
+        .list ul {
+            overflow: hidden;
+        }
+
+        .list li {
+            float: left;
+        }
+
+        .list li {
+            padding-left: 28px;
+            padding-right: 28px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            border: 1px solid #ccc;
+            background: -moz-linear-gradient(top, #FEFEFE, #EDEDED);
+            background: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#ededed));
+            border-right: none;
+            cursor: pointer;
+        }
+
+        #listCon {
+            height: 100px;
+        }
+
+        #listCon div {
+            padding: 10px;
+            position: absolute;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+
+        .list li:first-child {
+            border-left: none;
+        }
+
+        .list li:hover {
+            background: #fff;
+            border-bottom: none;
+        }
+
+        .list li.cur {
+            background: #fff;
+            border-bottom: none;
+        }
+
+        #listCon div.cur {
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+    </style>
+    </head>
+
+    <body>
+        <div id="tab">
+            <div class="list">
+                <ul>
+                    <li class="cur">许嵩</li>
+                    <li>周杰伦</li>
+                    <li>林俊杰</li>
+                    <li>陈奕迅</li>
+                </ul>
+            </div>
+            <div id="listCon">
+                <div class="cur">断桥残雪、千百度、幻听、想象之中</div>
+                <div>红尘客栈、牛仔很忙、给我一首歌的时间、听妈妈的话</div>
+                <div>被风吹过的夏天、江南、一千年以后</div>
+                <div>十年、K歌之王、浮夸</div>
+            </div>
+        </div>
+
+
+        <script type="text/javascript">
+            window.onload = function () {
+                var oDiv = document.getElementById("tab");
+                var lis = oDiv.getElementsByTagName("li");
+                var oDivCon = document.getElementById("listCon");
+                var lisDiv = oDivCon.getElementsByTagName("div");
+                for (var i = 0; i < lis.length; i++) {
+                    lis[i].index = i;
+                    lis[i].onmouseover = function () {
+                        show(this.index);
+                    }
+                }
+
+                function show(a) {
+                    for (var j = 0; j < lis.length; j++) {
+                        lis[j].className = "";
+                        lisDiv[j].className = "";
+                    }
+                    lis[a].className = "cur";
+                    lisDiv[a].className = "cur";
+                }
+            }
+        </script>
+    </body>
+
+</html>

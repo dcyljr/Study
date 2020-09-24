@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>选择颜色</title>
+</head>
+<body>
+    <input type="button" value="选择颜色" onclick="selColor()">
+</body>
+<script type="text/javascript">
+    //选择颜色
+    function selColor(){
+        var color=new Array("红色","黄色","蓝色","绿色","橙色","青色","紫色"); //下标从0-6
+        //系统随机产生一个数字  0.0-7.0  0.8787  6.54545   0-6
+        var num = Math.floor(Math.random()*7);
+        alert(num);
+        alert("您本次选择的颜色是："+color[num]);
+    }
+</script>
+</html>

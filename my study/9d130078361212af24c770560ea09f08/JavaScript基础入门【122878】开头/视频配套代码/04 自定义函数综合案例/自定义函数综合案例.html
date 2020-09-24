@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>自定义函数综合案例</title>
+</head>
+<body>
+<input type="button" value="新增学员" onclick="add(prompt('请输入新增学员姓名：'))"/>
+<input type="button" value="显示学员信息" onclick="showInfo()"/>
+<input type="button" value="测试" onclick="test()"/>
+<input type="button" value="测试2" onclick="test2()"/>
+</body>
+<script>
+    var students = new Array();
+
+    //新增学员信息
+    function add(name){
+        students.push(name);
+        //局部变量，此句报错
+        //alert(index);
+    }
+
+    //显示学员信息
+    function showInfo(){
+        document.write("共"+students.length+"名学员，信息如下：<br/>");
+        for(var index in students){
+            document.write(students[index]+"<br/>");
+        }
+    }
+
+    function test(){
+        //可以在不同的函数中声明名称相同的局部变量
+        for(var index = 1;index<=5;index++){
+            document.write(index+"<br/>");
+        }
+    }
+
+    function test2(){
+        //在函数内部声明局部变量，必须加上var
+        /*var students = 1;  //局部变量
+        document.write(students);*/
+
+        //如果不加var，这是一个全局变量
+        students = new Array("name1","name2","name3");
+    }
+</script>
+</html>

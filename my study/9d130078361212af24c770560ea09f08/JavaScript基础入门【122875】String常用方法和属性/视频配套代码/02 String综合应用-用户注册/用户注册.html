@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+</head>
+<body>
+<form action="">
+    用户名：<input type="text" value="admin"/><br/>
+    密&nbsp;码：<input type="password" id="pwd"/><br/>
+    <input type="button" value="注册" onclick="register()"/>
+</form>
+</body>
+<script>
+    function register(){
+        //根据ID获得元素  根据ID获得到了密码框,然后找到密码框里的值
+        var pwd = document.getElementById("pwd").value;
+
+        if(pwd.length==0){
+            alert("用户密码不能为空！");
+        }else if(pwd.length<6){
+            alert("用户密码长度不能小于六位！");
+        }else{
+            alert("注册成功！");
+        }
+    }
+</script>
+</html>

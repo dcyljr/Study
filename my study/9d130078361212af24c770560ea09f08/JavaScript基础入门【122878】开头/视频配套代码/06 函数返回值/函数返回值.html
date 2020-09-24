@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>比较两个数字的大小，返回较大值</title>
+</head>
+<body>
+<script>
+    //将字符串转换为数值parseInt()
+     var num1 = parseInt(prompt("请输入第一个数字："));
+     var num2 = parseInt(prompt("请输入第二个数字："));
+
+     if(isNaN(num1) || isNaN(num2)){
+         document.write("输入必须为数字！");
+     }else{
+         //比较大小，获得较大值
+         var big = isBig(num1,num2);
+         document.write("两个数字中的较大数是："+big);
+     }
+
+     //比较大小，获得较大值
+     function isBig(num1,num2){
+        if(num1>=num2){
+            return num1;
+        }else{
+            return num2;
+            //num2++;  //不要在return后面再写语句，因为执行不到
+        }
+     }
+
+</script>
+</body>
+</html>

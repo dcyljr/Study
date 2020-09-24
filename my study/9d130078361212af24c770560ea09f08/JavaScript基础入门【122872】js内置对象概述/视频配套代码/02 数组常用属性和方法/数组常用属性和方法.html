@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>数组常用属性和方法</title>
+ </head>
+ <body>
+ </body>
+ <script>
+   var week, month;//week：定义 星期；month:定义月
+   week =new Array ("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+   month = new Array("一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月");
+
+     //数组常用属性和方法：length 长度    join()连接
+     document.write("一周有："+week.length+"天");
+    document.write("<br/>它们是："+week.join("-"));
+     document.write("<br/>----------------------------<br/>")
+
+     //sort：排序 按字母顺序排序，精确点，按字符编码顺序排序
+     var nums = new Array(1,2,3,5,8,10,4);
+   document.write(nums.sort());
+   //可以自定义排序规则
+   /*比较函数应该具有两个参数 a 和 b，其返回值如下：
+    若 a 小于 b，在排序后的数组中 a 应该出现在 b 之前，则返回一个小于 0 的值。
+    若 a 等于 b，则返回 0。
+    若 a 大于 b，则返回一个大于 0 的值。*/
+     function sortNum(a,b){
+        if(a>b){
+            return 1;
+        }else if(a<b){
+            return -1;
+        }else{
+            return 0;
+        }
+     }
+   document.write("<br/>----------------------------<br/>")
+   document.write(nums.sort(sortNum));
+
+     //push()	向数组末尾添加一个或更多元素，并返回新的长度
+     var newLen = nums.push(100,1000);
+   document.write("<br/>----------------------------<br/>")
+   document.write("新数组长度是："+newLen);
+   document.write("<br/>----------------------------<br/>");
+   document.write(nums);
+
+   //concat()	合并两个数组
+    var names1 = new Array("Tom","Anne");
+     var names2 = new Array("Jack");
+   document.write("<br/>----------------------------<br/>");
+   document.write(names1.concat(names2));
+ </script>
+</html>

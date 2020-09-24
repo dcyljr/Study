@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form action="">
+    作业名：<input type="text" id="work"/><br/>
+    邮&nbsp;箱：<input type="text" id="email"/><br/>
+    <input type="button" value="提交作业" onclick="check()"/>
+</form>
+<script>
+    function check(){
+        //根据ID获得元素
+        var fileName = document.getElementById("work").value;
+        var email = document.getElementById("email").value;
+        var fileFlag = false; //文件名是否格式正确  true正确
+        var emailFlag = false; //Email是否格式正确  true正确
+
+        //判断作业名格式
+        var index = fileName.lastIndexOf(".");
+        //"1.html"
+        if(index!=-1 && index!=0 && fileName.substring(index)==".html"){
+            fileFlag = true;
+        }else{
+            alert("文件名无效！");
+        }
+
+        //判断email格式
+        if(email.indexOf("@")!=-1 && email.indexOf(".")!=-1 && email.indexOf(".")>email.indexOf("@")){
+            emailFlag = true;
+        }else{
+            alert("Email无效！");
+        }
+
+        if(fileFlag && emailFlag){
+            alert("作业提交成功！");
+        }else{
+            alert("作业提交失败！");
+        }
+
+    }
+</script>
+</body>
+</html>

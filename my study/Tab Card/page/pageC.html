@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>海归人才网</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/index.css">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/index.js"></script>
+</head>
+
+<body>
+    <div class="home">
+        <div class="logo-head">
+            <div class="logo-img">
+                <img src="../images/logo.png" alt="">
+            </div>
+        </div>
+        <div class="nav">
+            <ul class="tab">
+                <li><a class="t-tabIn" href="javascript:" data-get="one">关于我们</a>
+                </li>
+                <li><a href="javascript:" data-get="two">联系我们</a>
+                </li>
+                <li><a href="javascript:" data-get="there">广告服务</a>
+                </li>
+                <li><a href="javascript:" data-get="four">免责声明</a>
+                </li>
+                <li><a href="http://www.haiguirc.com/" target="_blank">网站主页</a>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-content">
+            <!-- 关于我们 -->
+            <div class="tab-card tab-block one">
+                <div class="bri-introduction">
+                    <div class="a-company">
+                        <h3>公司简介</h3>
+                        <p>据教育部权威统计数据，近年来我国的出国留学人员回流率已超过50%，海外归国人才正成为实现伟大中国梦的重要人才智力支撑。海归人才网是一家专门服务于海归人才招聘引进的网站，主要为国内高等院校、科研院所、医疗卫生单位、知名企业等企事业单位提供面向海归人才的招聘宣传服务，为正在海外留学、有意归国发展或海外留学后已归国的人员提供国内第一手的人才需求信息。创办以来，凭借海量、权威的信息、精准的招聘效果，海归人才网受到越来越多招聘单位与海归求职者的青睐，正逐步发展成为国内最有影响力的海外高端人才需求信息平台。</p>
+                    </div>
+                    <div class="net-c">
+                        <h3>海归人才网的特点</h3>
+                        <div class="characteristic">
+                            <div class="l-tab">
+                                <div class="tab-text l-tab-text">
+                                    <h4>突出海外专业性强</h4>
+                                    <p>本站侧重发布国内高等院校、科研院所、医疗卫生单位、知名企业等企事业单位的海外人才引进需求，信息的针对性强，特色突出。</p>
+                                </div>
+                                <div class="t-img right-img">
+                                    <img src="../images/tc-2.png" alt="">
+                                    <div class="dotted dotted-1"></div>
+                                </div>
+                            </div>
+                            <div class="center-bar"></div>
+                            <div class="r-tab">
+                                <div class="t-tab">
+                                    <div class="t-img g-img">
+                                        <div class="dotted dotted-3"></div>
+                                        <img src="../images/tc-1.png" alt="">
+                                    </div>
+                                    <div class="tab-text r-tab-text">
+                                        <h4>受众广泛群体集中</h4>
+                                        <p>本站主要访问群体为正在海外留学、有意归国发展或海外留学后已归国的人员，据统计网站50%以上的访问者来自海外。</p>
+                                    </div>
+                                </div>
+                                <div class="b-tab">
+                                    <div class="t-img b-img">
+                                        <div class="dotted dotted-2"></div>
+                                        <img src="../images/tc-3.png" alt="">
+                                    </div>
+                                    <div class="tab-text b-tab-text">
+                                        <h4>信息丰富来源真实</h4>
+                                        <p>本站信息每天更新，信息量大，且大部分信息均来源于各大招聘单位或其主管部门的官方网站，可靠性高。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 联系我们 -->
+            <div class="tab-card two">
+                <div class="contact_us">
+                    <ul>
+                        <li>
+                            <div class="dz-logo"><img src="../images/dz-1.png" alt=""></div>
+                            <div class="i-inf i-address">
+                                <h4>公司地址</h4>
+                                <p>广州市天河区中山大道建工路13号天信楼515号</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dz-logo"><img src="../images/dz-2.png" alt=""></div>
+                            <div class="i-inf i-iphone">
+                                <h4>联系方式</h4>
+                                <p>QQ：358651377</p>
+                                <p>客户电话：020-85611139</p>
+                                <p>邮箱：358651377@qq.com</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dz-logo"><img src="../images/dz-3.png" alt=""></div>
+                            <div class="i-inf">
+                                <h4>关注微信</h4>
+                                <div class="w-inf">
+                                    <div class="w-number">
+                                        <p>微信号</p>
+                                        <p>haiguirc</p>
+                                    </div>
+                                    <div class="w-img">
+                                        <img src="../images/dz-wx.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="baidu_map">
+                    <div style="width:697px;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
+                </div>
+            </div>
+            <!-- 广告服务 -->
+            <div class="tab-card there">
+                <div class="ad_service ad_top_service">
+                    <div class="ad_l_logo">
+                        <img src="../images/hz-1.png" alt=""></div>
+                    <div class="ad_text">
+                        <div class="ad_content">
+                            <p>感谢您对海归人才网的关注与信任！</p>
+                            <p>根据您的需求，海归人才网可以为您提供信息发布和广告宣传等不同类型、不同价格的招聘发布服务。</p>
+                            <p>您可以通过以下途径直接联系海归人才网，沟通招聘信息发布或广告宣传事宜：</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ad_service">
+                    <div class="ad_l_logo">
+                        <img src="../images/hz-2.png" alt=""></div>
+                    <div class="ad_text">
+                        <div class="ad_content">
+                            <p>联系电话：020-85611139</p>
+                            <p>咨询QQ：358651377</p>
+                            <p>建议联系时间：上午8:30至12:00；下午：2:00至6:00</p>
+                            <p>地址：广州市天河区中山大道建工路13号</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ad_service">
+                    <div class="ad_l_logo">
+                        <img src="../images/hz-3.png" alt=""></div>
+                    <div class="ad_text">
+                        <div class="ad_content">
+                            <p>您也可以将招聘信息及联系方式直接发送到邮箱：358651377@qq.com。</p>
+                            <p>为便于验证信息，请您在发送邮件时附上权威的信息出处网址或有关证明材料。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ad_service ad_la_service">
+                    <div class="ad_l_logo">
+                        <img src="../images/hz-4.png" alt=""></div>
+                    <div class="ad_text">
+                        <div class="ad_content ad_wx">
+                            <div class="ad_wx_p">
+                                <p>关注微信号：haiguirc</p>
+                                <p>最后，再次感谢您的关注，祝您工作顺利，天天好心情</p>
+                            </div>
+                            <img src="../images/dz-wx.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 免责声明 -->
+            <div class="tab-card four">
+                <div class="att">
+                    <div class="att_img"><img src="../images/zytb.png" alt=""></div>
+                    <h4>注意 !</h4>
+                </div>
+                <div class="att-content">
+                    <div class="l_att_bar"></div>
+                    <div class="r_att_text">
+                        <div class="a_text a_text1">
+                            <p>本站刊登的招聘信息，其最终解释权归招聘单位，如求职者对招聘具体请款有疑问，请直接与招聘单位联系。</p>
+                        </div>
+                        <div class="a_text a_text2">
+                            <p>本站部分信息来源于网络，其版权归原作者所有，本站转载该信息仅出于让求职者周知目的。如有侵权，请与本站联系，本站将尽快处理。</p>
+                        </div>
+                        <div class="a_text a_text3">
+                            <p>由于网络虚假招聘信息泛滥，本站随意竭尽所能对信息的真实性进行审核，但仍不能保证所有信息100%的真实性。若您在浏览本站过程中发现有可疑信息，请与本站联系，本站将迅速进行甄别处理。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 网站主页 -->
+            <!-- <div class="tab-card">
+                <div class="net-logo"><img src="../images/logo.png" alt=""></div>
+                <h4><a href="http://www.haiguirc.com/">海归人才网</a></h4>
+            </div> -->
+        </div>
+        <div class="footer">
+            <p>Copyright © 2013-2019海归人才网 版权所有</p>
+            <p>网站备案信息:粤ICP备13048400号-5 粤公安网安备:44010602004141号</p>
+            <p>广州高才信息科技有限公司提供运营支持</p>
+            <p>客户咨询电话:020-85611139 QQ:358651377 邮箱:358651377@qq.com</p>
+            <p>海归人才网————访问量排名靠前的海归人才需求信息平台</p>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function initMap() {
+            createMap();
+            setMapEvent();
+            addMapControl();
+        }
+
+        function createMap() {
+            var map = new BMap.Map("dituContent");
+            var point = new BMap.Point(113.379139, 23.128781);
+            map.centerAndZoom(point, 17);
+            window.map = map;
+        }
+
+        function setMapEvent() {
+            map.enableDragging();
+            map.enableScrollWheelZoom();
+            map.enableDoubleClickZoom();
+            map.enableKeyboard();
+        }
+
+        function addMapControl() {
+            var ctrl_nav = new BMap.NavigationControl({
+                anchor: BMAP_ANCHOR_TOP_LEFT,
+                type: BMAP_NAVIGATION_CONTROL_LARGE
+            });
+            map.addControl(ctrl_nav);
+            var ctrl_ove = new BMap.OverviewMapControl({
+                anchor: BMAP_ANCHOR_BOTTOM_RIGHT,
+                isOpen: 1
+            });
+            map.addControl(ctrl_ove);
+            var ctrl_sca = new BMap.ScaleControl({
+                anchor: BMAP_ANCHOR_BOTTOM_LEFT
+            });
+            map.addControl(ctrl_sca);
+        }
+
+        initMap();
+    </script>
+</body>
+
+</html>

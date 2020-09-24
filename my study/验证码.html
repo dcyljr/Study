@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>随机验证码</title>
+    <script>
+        var arr = "";
+        window.onload = function () {
+            var maa = document.getElementsByClassName("block")[0];
+            var looking = document.getElementById("look");
+            var put = document.getElementById("text");
+            var btnn = document.getElementById("btn");
+            Yan_ma(maa);
+            looking.onclick = function () {
+                Yan_ma(maa);
+            };
+            btnn.onclick = function () {
+                if (put.value.toLowerCase() == arr.toLowerCase()) {
+                    alert("验证成功");
+                } else {
+                    alert("验证失败");
+                    Yan_ma(maa);
+                }
+            }
+
+        };
+
+
+        function Yan_ma(aim) {
+            arr = "";
+            var str = "";
+            for (var i = 0; i < 8; i++) {
+                //随机数 Math.random  0-1 的随机值
+                var n = Math.random();
+                //随机颜色
+                var color = fontcolor();
+                //随机大小
+                var size = Math.floor(Math.random() * 12 + 20);
+                //随机位置
+                var g = Math.random() < 0.5 ? -1 : 1;
+                var topset = Math.random() * g * 8;
+                //随机旋转
+                var h = Math.random() < 0.5 ? -1 : 1;
+                var zhuan = Math.random() * h * 45;
+                if (n < 0.25) {
+                    //随机数字
+                    var s = Math.floor(Math.random() * 10);
+                    str += "<span style='transform:rotatez(" + zhuan + "deg);left:" + topset + "px; color: " + color +
+                        ";font-size:" + size + "px ;top:" + topset + "px'>" + s + "</span>";
+                    arr += s;
+                }
+                //随机大写字母  //65-91
+                else if (n >= 0.25 && n < 0.5) {
+                    var s = String.fromCharCode(Math.floor(Math.random() * 26 + 65));
+                    str += "<span style='transform:rotatez(" + zhuan + "deg); left:" + topset + "px; color: " + color +
+                        ";font-size:" + size + "px ;top:" + topset + "px'>" + s + "</span>";
+                    arr += s;
+                }
+                //随机小写字母  97-123
+                else if (n >= 0.5 && n < 0.75) {
+                    var s = String.fromCharCode(Math.floor(Math.random() * 26 + 97));
+                    str += "<span style ='transform:rotatez(" + zhuan + "deg);left:" + topset + "px;  color: " + color +
+                        " ;font-size:" + size + "px ;top:" + topset + "px'>" + s + "</span>";
+                    arr += s;
+                }
+                //随机文字
+                else {
+                    var letter = "如若可以亲爱的请许我青灯墨下执一笔素笺今生为你吟尽千回百转念";
+                    var s = letter.charAt(Math.floor(Math.random() * letter.length));
+                    str += "<span style='transform: rotatez(" + zhuan + " deg) ; left:" + topset + "px; color: " +
+                        color + ";font-size:" + size + "px;top:" + topset + "px '>" + s + "</span>";
+                    arr += s;
+                }
+            }
+            aim.innerHTML = str;
+        }
+
+        function fontcolor() {
+            var s1 = "";
+            for (var k = 0; k < 6; k++) {
+                var z = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "a", "b", "c", "d", "e", "f"];
+                var m = z[Math.floor(Math.random() * z.length)];
+                s1 += m;
+            }
+            return "#" + s1;
+        }
+    </script>
+    <style>
+        .block {
+            width: 250px;
+            height: 60px;
+            background: url("bg2.png") no-repeat center;
+            background-size: 100%;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .block span {
+            position: relative;
+            display: inline-block;
+            width: 20px;
+            margin: 5px 3px;
+        }
+
+        #look {
+            color: #9200ff;
+        }
+
+        #look:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="block">
+    </div>
+    <span id="look">看不清...</span>
+    <br />
+    <input type="text" id="text" placeholder="请输入验证码" />
+    <button id="btn">验证</button>
+</body>
+
+</html>

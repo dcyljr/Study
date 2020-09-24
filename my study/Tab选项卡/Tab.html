@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tab选项卡</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/tab.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tab.js"></script>
+</head>
+
+<body>
+    <!-- Tab选项卡菜单,鼠标移动到一个li选项卡时，对应的那个div的内容显示出来，而其他的内容是不可见的-->
+
+    <!-- 方法一：利用css的display属性，设置ul后面所有的div内容全部都是不可见的，只有当鼠标滑过相应的li时，它对应的div才出现 -->
+    <div id="tabBox">
+        <ul>
+            <li class="tabIn">科技</li>
+            <li>新闻</li>
+            <li>财经</li>
+            <li>体育</li>
+        </ul>
+        <div class="tabCont">科技内容</div>
+        <div>新闻内容</div>
+        <div>财经内容</div>
+        <div>体育内容</div>
+    </div>
+
+    <!-- 方法二：利用jquery的show（）和hide（）方法对列表下面div块进行操作 -->
+    <div id="t_tabBox">
+        <ul>
+            <li class="t_tabIn">科技</li>
+            <li>新闻</li>
+            <li>体育</li>
+            <li>财经</li>
+        </ul>
+        <div id="kk"><!-- $("#tabBox div").eq(index).show().siblings().hide();
+            id 为tabbox 里的第index个div显示，同时将它的同级元素隐藏。
+            因为你的选项卡ul和 div 是同级元素，所以会被隐藏,所以需要在div外嵌套一个父元素div -->
+            <div class="t_tabCont">科技内容</div>
+            <div>新闻内容</div>
+            <div>体育内容</div>
+            <div>财经内容</div>
+        </div>
+    </div>
+
+    <!-- 单个显示子菜单 -->
+    <div class="tab">
+        <ul>
+            <li class="s_tab">新闻
+                <div class="tabcontent">新闻</div>
+            </li>
+            <li>科技</li>
+            <li>体育</li>
+            <li>财经</li>
+        </ul>
+    </div>
+</body>
+
+</html>

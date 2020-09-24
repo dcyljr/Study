@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JS中常用的系统函数</title>
+</head>
+<body>
+<script>
+    /*//parseInt() 将数字转化为整数
+    document.write(parseInt(3.5)+"<br/>");
+    //parseInt() 将字符串解析转化为整数
+    document.write(parseInt("3.5")+"<br/>");
+    //会对字符进行判断是否为有效数字，如果不是返回NaN
+    document.write(parseInt("abc3")+"<br/>");
+    document.write(parseInt("3.5abc")+"<br/>");
+    document.write("<br/>************************<br/>");
+
+    //parseFloat()解析一个字符串，返回一个浮点数
+    document.write(parseFloat("3.5")+"<br/>");
+    document.write(parseFloat("3.5abc")+"<br/>");
+    document.write(parseFloat("abc3.5")+"<br/>");
+    //第一个出现的小数点是有效字符，如果有两个小数点，第二个小数点被视作无效
+    document.write(parseFloat("3.5.6abc")+"<br/>");
+    document.write("<br/>************************<br/>");
+
+    //isNaN() 检查参数是否非数字
+    document.write(isNaN("3.5")+"<br/>");
+    document.write(isNaN("3.5abc")+"<br/>");*/
+
+    //用户输入数字
+    var num = prompt("请输入一个数字：");
+    if(isNaN(num)){
+        document.write("您输入的不是数字，请确认！");
+    }else{
+        document.write("您输入的数字是："+num);
+    }
+</script>
+</body>
+</html>

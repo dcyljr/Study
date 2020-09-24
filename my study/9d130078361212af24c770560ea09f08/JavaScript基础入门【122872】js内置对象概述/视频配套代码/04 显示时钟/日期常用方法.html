@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Date常用方法</title>
+</head>
+<body>
+<script>
+    //获取当前日期：格式： **年*月*日  **：**：**  星期*
+    var myDate = new Date();
+    document.write(myDate.getFullYear()+"年"+(myDate.getMonth()+1)+"月"+myDate.getDate()+"日");
+    document.write("&nbsp;&nbsp;"+myDate.getHours()+":"+myDate.getMinutes()+":"+myDate.getSeconds());
+    var week = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+    document.write("&nbsp;&nbsp;"+week[myDate.getDay()]);
+</script>
+</body>
+</html>

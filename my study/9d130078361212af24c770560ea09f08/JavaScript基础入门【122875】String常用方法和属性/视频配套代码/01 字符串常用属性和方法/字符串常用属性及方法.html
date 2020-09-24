@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //字符串长度 length
+    //var txt = "hello kgc";
+    //var txt = new String("hello kgc");
+    //document.write(txt.length);
+
+    //charAt()	返回在指定位置的字符（注：字符串中第一个字符的下标是0）
+    //document.write(txt.charAt(1));
+
+    //concat()	连接字符串
+    //使用+更简单一些
+    /*document.write(txt.concat(",everybody!")+"<br/>");
+    document.write(txt+",everybody!");*/
+
+    //replace() 	用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串
+    //document.write(txt.replace("hello","hi"));
+
+    //split() 	把一个字符串分割成字符串数组
+    /*var str = new String("my name is kgc");
+    var strs = str.split(" ");
+    document.write("分割后数组的长度："+strs.length+"<br/>");
+    document.write(strs[0]);*/
+
+
+    //indexOf&lastIndexOf&match三者对比学习
+    //indexOf()	返回某个指定的字符串值在字符串中首次出现的位置,找不到则返回-1
+    /*var str = new String("hello kgc");
+    document.write(str.indexOf("hello")+"<br/>");
+    document.write(str.indexOf("kgc")+"<br/>");
+    document.write(str.indexOf("e")+"<br/>");
+    document.write(str.indexOf("Kgc")+"<br/>");*/
+    //lastIndexOf()	返回一个指定的字符串值最后出现的位置,找不到则返回-1
+    /*var str = new String("hello kgc");
+    document.write(str.lastIndexOf("hello")+"<br/>");
+    document.write(str.lastIndexOf("kgc")+"<br/>");
+    document.write(str.lastIndexOf("e")+"<br/>");
+    document.write(str.lastIndexOf("Kgc")+"<br/>");
+    document.write(str.indexOf("l")+"<br/>");  //找字母l第一次出现的位置
+    document.write(str.lastIndexOf("l")+"<br/>");//找字母l最后一次出现的位置*/
+    //match()	可在字符串内检索指定的值，或找到一个或多个正则表达式的匹配
+    //该方法类似 indexOf() 和 lastIndexOf()，但是它返回指定的值，而不是字符串的位置
+    //找不到则返回null
+   /* var str = new String("hello kgc");
+    document.write(str.match("hello")+"<br/>");
+    document.write(str.match("Kgc")+"<br/>");*/
+
+    /*toLowerCase()	把字符串转换为小写
+    toUpperCase()	把字符串转换为大写*/
+   /* var str = new String("hello kgc");
+    document.write(str.toUpperCase()+"<br/>");
+    document.write(str.toLowerCase()+"<br/>");*/
+
+
+    //substr & substring &slice 对比学习
+//    substr()	从起始索引号提取字符串中指定数目的字符（不建议使用）
+    /*var str = new String("hello kgc");
+    document.write(str.substr(0,5));*/
+//    substring(start,end)	提取字符串中两个指定的索引号之间的字符  >=start <end
+    //包括开始位置的字符，不包括结束位置的字符
+    /*var str = new String("hello kgc");
+    document.write(str.substring(0,7)+"<br/>");
+    document.write(str.substring(3)+"<br/>");*/
+//    slice()	提取字符串的某个部分，并以新的字符串返回被提取的部分
+    /*var str = new String("hello kgc");
+    document.write(str.slice(0,7)+"<br/>");
+    document.write(str.slice(3)+"<br/>");*/
+
+    //slice() 比 substring() 要灵活一些，因为它允许使用负数作为参数
+    var str = new String("hello kgc");
+    document.write(str.slice(-3)+"<br/>");
+    //document.write(str.substring(-3)+"<br/>");
+
+</script>
+</body>
+</html>

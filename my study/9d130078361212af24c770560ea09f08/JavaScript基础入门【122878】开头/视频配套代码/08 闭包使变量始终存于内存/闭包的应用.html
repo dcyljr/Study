@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>闭包让这些变量的值始终保持在内存中</title>
+</head>
+<body>
+<script>
+    var nAdd;  //全局变量
+
+    function f1(){
+        var n = 1;  //局部变量
+
+        //匿名函数
+        nAdd = function(){
+            n += 1;
+        }
+
+        function f2(){
+            alert(n);
+        }
+        return f2;
+    }
+
+    var result = f1(); //n局部变量按理说在f1()调用完之后被删除
+    result();  //1
+    nAdd();
+    //闭包使得变量的值始终保持在内存中
+    result();  //2 说明n并未被删除
+</script>
+</body>
+</html>

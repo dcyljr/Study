@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/tab.css">
+    <script src="../js/SuperSlide2.1-demo-00/SuperSlide2.1-demo-00/jquery1.42.min.js"></script>
+    <script src="../js/jquery.SuperSlide.2.1.3.js"></script>
+</head>
+
+<body>
+    <div class="focusBox" style="margin:0 auto">
+        <div class="pic">
+            <ul>
+                <li>
+                    <a href="/zhaopin/zhuanti/gzjljcjsyjy2018/index.html" target="_blank"></a><img height="40" src="http://img.dede.com/na1176.gif">
+                    <p>广州计量检测技术研究院</p>
+                    <p style="color:#666">2018年博士后及其他岗位校园招聘</p>
+                </li>
+                <li>
+                    <a href="/zhaopin/zhuanti/dglgxymhwktz2018/index.html" target="_blank"></a><img height="40" src="http://img.dede.com/na460.gif">
+                    <p>东莞理工学院博士后创新实践基地</p>
+                    <p style="color:#666">2018年招收"工程力学"博士后</p>
+                </li>
+                <li>
+                    <a href="/zhaopin/zhuanti/szqhcxyjy2017/index.html" target="_blank"></a><img height="40" src="http://img.dede.com/na917.gif">
+                    <p>深圳市前海创新研究院</p>
+                    <p style="color:#666">2018年博士后研究人员招聘简章</p>
+                </li>
+                <li>
+                    <a href="/zhaopin/zhuanti/hdlgdxxjclzx2018/index.html" target="_blank"></a><img height="40" src="http://img.dede.com/na1057.gif">
+                    <p>华东理工大学</p>
+                    <p style="color:#666">材料科学与工程专业博士后招聘</p>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="/zhaopin/zhuanti/hzsfdxslyjs2018/index.html" target="_blank"></a><img height="40" src="http://img.dede.com/na1174.gif">
+                    <p>杭州师范大学衰老研究所王沥组</p>
+                    <p style="color:#666">招聘副研究员/助理研究员/博士后</p>
+                </li>
+                <li>
+                    <a href="/zhaopin/zhuanti/gxdxwgjsxy2018/index1.html" target="_blank"></a><img height="40" src="http://img.dede.com/na1173.gif">
+                    <p>广西大学光电材料和器件研究中心</p>
+                    <p style="color:#666">2018年博士后招聘启事</p>
+                </li>
+                <li>
+                    <a href="/zhaopin/zhuanti/bjdxszyjsyxxgcxy2017/index.html" target="_blank"></a><img height="40" src="http://img.dede.com/na310.gif">
+                    <p>北京大学信息工程学院</p>
+                    <p style="color:#666">2018年招聘博士后</p>
+                </li>
+                <li>
+                    <a href="/zhaopin/zhuanti/szdxxxgcxyhjw2018/index.html" target="_blank"></a><img height="40" src="http://img.dede.com/na12.gif">
+                    <p>深圳大学特聘教授黄继武课题组</p>
+                    <p style="color:#666">2018年招聘专职研究人员/博士后</p>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="/zhaopin/zhuanti/zjdxfyyqgscsys2018/index.html" target="_blank"></a><img height="40" src="http://img.dede.com/na176.gif">
+                    <p>浙江大学发育和器官生成实验室</p>
+                    <p style="color:#666">2018年博士后招聘</p>
+                </li>
+                <li>
+                    <a href="/zhaopin/zhuanti/zjdxtzyjy2018/index.html" target="_blank"></a><img height="40" src="http://img.dede.com/na955.gif">
+                    <p>浙江大学台州研究院</p>
+                    <p style="color:#666">2018年度博士后研究人员招聘</p>
+                </li>
+                <li>
+                    <a href="/zhaopin/zhuanti/zgyxkxyxybyy2018/index.html" target="_blank"></a><img height="40" src="http://img.dede.com/na1002.gif">
+                    <p>中国医学科学院血液病医院</p>
+                    <p style="color:#666">程涛课题组2018年招聘</p>
+                </li>
+                <li>
+                    <a href="/zhaopin/zhuanti/nfkjdxslyz2018/index.html" target="_blank"></a><img height="40" src="http://img.dede.com/na351.gif">
+                    <p>南方科技大学电子与电气工程系</p>
+                    <p style="color:#666">2018年招聘博士后/研究助理教授</p>
+                </li>
+            </ul>
+        </div>
+        <ul class="num">
+            <li><a>1</a><span></span></li>
+            <li><a>2</a><span></span></li>
+            <li><a>3</a><span></span></li>
+            <li><a>4</a><span></span></li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        $(".focusBox").slide({
+            titCell: ".num li",
+            mainCell: ".pic",
+            effect: "fold",
+            autoPlay: true,
+            trigger: "click",
+            startFun: function (i) {
+                jQuery(".focusBox .txt li").eq(i).animate({
+                    "bottom": 0
+                }).siblings().animate({
+                    "bottom": -36
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

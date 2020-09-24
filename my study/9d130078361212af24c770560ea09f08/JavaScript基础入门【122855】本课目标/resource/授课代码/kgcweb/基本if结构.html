@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>用户登录</title>
+  <style>
+	*{padding:0;margin:0;}
+	.clear{clear:both;overflow:hidden;}
+	.login-box{
+		width:430px;
+		height:330px;
+		margin:100px auto;
+		background:url(img/tb.png) no-repeat;
+		box-shadow:0 0 2px rgba(0,0,0,.5);
+	}
+	.input-box{padding:188px 50px 0;}
+	.input-box img{margin-top:18px;}
+	.left{float:left;}
+	.box-r{width:250px;margin-left:20px;}
+	p{margin-top:15px;}
+	input{padding:5px 0;border:1px #d7d7d7 solid;width:150px;}
+	.login{
+		border:0 none;
+		background:#0a88e1;
+		color:#fff;
+		font-size:12px;
+		text-align:center;
+		line-height:20px;
+		width:220px;
+	}
+  </style>
+ </head>
+ <body>
+	<form action="" method="post" class="login-box">
+		<div class="input-box">
+			<img src="img/tx.jpg" class="left" width="60" height="60"/>
+			<div class="box-r left">
+				<p>用户名：<input type="text" id="name"/></p>
+				<p>密&emsp;码：<input type="password" id="psw"/></p>
+				<div class="clear"></div>
+				<p><input type="button" value="登录" class="login" onclick="check();"/></p>
+			</div>
+		</div>
+	</form>
+	<script>
+		//封装了多行代码的一个功能块，给这个功能块取名叫check()
+		function check(){
+			//验证用户输入的QQ用户名和密码是否正确
+			//模拟正确的用户名和密码，真正开发过程，这个数据是需要在数据库读取的
+			var rightUserName = "hello";
+			var rigthPwd = "123456";
+
+			//拿到用户填写的用户名和密码
+			var txtUserName = document.getElementById("name");  //用户名文本框
+			var userName = txtUserName.value;  //用户名文本框中填写的值
+
+			var txtPwd = document.getElementById("psw");  //用户密码框
+			var pwd = txtPwd.value;  //用户名文本框中填写的值
+
+			//如果userName、rightUserName一样的内容；pwd、rigthPwd一样的内容
+			if(userName!=rightUserName){
+				alert("用户名不正确！");
+			}
+			if(pwd!=rigthPwd){
+				alert("用户密码不正确！");
+			}
+		}
+	</script>
+ </body>
+
+</html>

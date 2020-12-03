@@ -109,7 +109,7 @@ window.onload = function () {
             iLi[i].style.backgroundColor = '#aaa';
         }
         iLi[currentNUM - 1].style.backgroundColor = 'red'; //设置当前圆点颜色
-    };uod
+    };
     //鼠标进入img_box和离开
     imgBox.addEventListener('mouseover', function () {
         //左右显示出来
